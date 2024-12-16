@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@mmcinema-ui/shadcn/ui": ["libs/shadcn/ui/src/index.ts"],
+      "@mmcinema-ui/shadcn/ui/*": ["libs/shadcn/ui/src/*"],
+      "@mmcinema-ui/shadcn/utils": ["libs/shadcn/utils/src/index.ts"],
+      "@mmcinema-ui/shadcn/utils/*": ["libs/shadcn/utils/src/*"],
+      "@mmcinema-ui/shared-hooks": ["libs/shared-hooks/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
