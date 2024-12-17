@@ -1,0 +1,66 @@
+{
+  "CORE": {
+    "language": {
+      "en": "English",
+      "vi": "Vietnamese"
+    },
+    "not_found": {
+      "title": "Page Not Found",
+      "message": "The page you are looking for does not exist or has been deleted."
+    },
+    "global_error": {
+      "title": "System Error",
+      "message": "The system is having an issue, please come back later."
+    },
+    "reload": "Reload",
+    "system": {
+      "title": "System",
+      "setting": "Settings",
+      "logout": "Logout",
+      "error": "System Error"
+    },
+    "all": "All",
+    "search": "Search",
+    "complete": "Complete",
+    "back": "Back",
+    "noti": "Notification",
+    "setting": "Settings",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "block": "Block",
+    "open": "Open",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add New",
+    "view": "View",
+    "send": "Send",
+    "download": "Download",
+    "upload": "Upload",
+    "copy": "Copy",
+    "success": "Success",
+    "fail": "Fail",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Information",
+    "confirm": {
+      "title": "Confirm",
+      "delete": "Are you sure you want to delete?",
+      "close": "Are you sure you want to close?",
+      "cancel": "Are you sure you want to cancel?",
+      "save": "Are you sure you want to save?",
+      "send": "Are you sure you want to send?"
+    },
+    "add_success": "Added successfully",
+    "update_success": "Updated successfully",
+    "edit_success": "Edited successfully",
+    "delete_success": "Deleted successfully",
+    "add_fail": "Add failed",
+    "update_fail": "Update failed",
+    "edit_fail": "Edit failed",
+    "delete_fail": "Delete failed"
+  },
+  "title_page": {
+    "root": "MMCinema - English"
+  }
+}

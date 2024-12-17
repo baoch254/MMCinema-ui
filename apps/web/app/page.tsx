@@ -1,5 +1,10 @@
-import { Button } from '@mmcinema-ui/shadcn/ui';
+import { ModeToggle, ModeLanguage } from '@mmcinema-ui/shared-ui';
 
 export default function Index() {
-  return <Button>123</Button>;
+  return (
+    <div>
+      <ModeToggle />
+      <ModeLanguage />
+    </div>
+  );
 }

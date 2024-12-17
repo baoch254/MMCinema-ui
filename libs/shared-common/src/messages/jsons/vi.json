@@ -1,0 +1,66 @@
+{
+  "CORE": {
+    "language": {
+      "en": "Tiếng Anh",
+      "vi": "Tiếng Việt"
+    },
+    "not_found": {
+      "title": "Không tìm thấy trang",
+      "message": "Trang bạn đang tìm kiếm không tồn tại hoặc đã bị xóa."
+    },
+    "global_error": {
+      "title": "Lỗi hệ thống",
+      "message": "Hệ thống đang có vấn đề, vui lòng quay lại sau."
+    },
+    "reload": "Tải lại",
+    "system": {
+      "title": "Hệ thống",
+      "setting": "Cài đặt",
+      "logout": "Đăng xuất",
+      "error": "Lỗi hệ thống"
+    },
+    "all": "Tất cả",
+    "search": "Tìm kiếm",
+    "complete": "Hoàn thành",
+    "back": "Quay lại",
+    "noti": "Thông báo",
+    "setting": "Cài đặt",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "close": "Đóng",
+    "block": "Chặn",
+    "open": "Mở",
+    "delete": "Xóa",
+    "edit": "Sửa",
+    "add": "Thêm mới",
+    "view": "Xem",
+    "send": "Gửi",
+    "download": "Tải xuống",
+    "upload": "Tải lên",
+    "copy": "Sao chép",
+    "success": "Thành công",
+    "fail": "Thất bại",
+    "error": "Lỗi",
+    "warning": "Cảnh báo",
+    "info": "Thông tin",
+    "confirm": {
+      "title": "Xác nhận",
+      "delete": "Bạn có chắc chắn muốn xóa?",
+      "close": "Bạn có chắc chắn muốn đóng?",
+      "cancel": "Bạn có chắc chắn muốn hủy?",
+      "save": "Bạn có chắc chắn muốn lưu?",
+      "send": "Bạn có chắc chắn muốn gửi?"
+    },
+    "add_success": "Thêm mới thành công",
+    "update_success": "Cập nhật thành công",
+    "edit_success": "Sửa thành công",
+    "delete_success": "Xóa thành công",
+    "add_fail": "Thêm mới thất bại",
+    "update_fail": "Cập nhật thất bại",
+    "edit_fail": "Sửa thất bại",
+    "delete_fail": "Xóa thất bại"
+  },
+  "title_page": {
+    "root": "MMCinema - Tiếng Việt"
+  }
+}
