@@ -4,3 +4,4 @@ export * from './lib/ui/label';
 export * from './lib/ui/form';
 export * from './lib/ui/dropdown-menu';
 export * from './lib/ui/avatar';
+export * from './lib/ui/card';
