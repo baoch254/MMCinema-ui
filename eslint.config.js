@@ -7,7 +7,7 @@ module.exports = [
   ...nx.configs['flat/javascript'],
   ...pluginQuery.configs['flat/recommended'],
   {
-    ignores: ['**/dist'],
+    ignores: ['**/dist', '**/node_modules', '**/ckeditor5/build/**'],
   },
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
