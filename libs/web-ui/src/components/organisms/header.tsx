@@ -6,12 +6,11 @@ import MenuTablet from './menu-tablet';
 const Header = () => {
   const { isSidebarExpanded, setSidebarExpand } = useSidebarExpandStore();
   return (
-    <div className="h-full w-full">
-      <div
-        className="w-full h-[64px] z-40 flex-none lg:z-50 top-0"
-        style={{ position: isSidebarExpanded ? 'fixed' : 'sticky' }}
-      >
-        <div className="absolute h-full w-full px-[32px] bg-white shadow-[inset_0px_-1px_0px_0px_rgba(0,0,0,0.08)]">
+    <div
+      className=" fixed h-full w-full z-40"
+    >
+      <div className="w-full h-[64px] flex-none lg:z-50 top-0">
+        <div className=" h-full w-full px-[32px] bg-white shadow-[inset_0px_-1px_0px_0px_rgba(0,0,0,0.08)]">
           <div className="wrapper grid grid-cols-1 items-center lg:border-0 [--header-height:64px] h-full w-full">
             <div className="relative flex items-center justify-between mx-auto h-full w-full max-w-6xl">
               <div className="flex items-center">
@@ -50,18 +49,38 @@ const Header = () => {
                   <NavbarItems />
                 </div>
               </div>
-              <div className='flex ml-auto space-x-3 flex-nowrap items-center'>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                     stroke="currentColor" aria-hidden="true" className="h-6 w-6">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              <div className="flex ml-auto space-x-3 flex-nowrap items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                  className="h-6 w-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
                 </svg>
-                <div className='lg:hidden'>
-                  <svg className="block w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none"
-                       viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"
-                       onClick={() => setSidebarExpand(!isSidebarExpanded)}>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M4 6h16M4 12h16M4 18h16"></path>
+                <div className="lg:hidden">
+                  <svg
+                    className="block w-7 h-7"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    onClick={() => setSidebarExpand(!isSidebarExpanded)}
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
                   </svg>
                 </div>
               </div>
@@ -70,7 +89,7 @@ const Header = () => {
         </div>
       </div>
       {isSidebarExpanded && (
-        <div className=" fixed top-[64px] h-full w-full lg:hidden">
+        <div className=" fixed top-[64px] h-full w-full lg:hidden bg-white">
           <MenuTablet />
         </div>
       )}

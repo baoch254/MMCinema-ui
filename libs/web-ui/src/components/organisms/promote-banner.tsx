@@ -4,7 +4,7 @@ import {Button} from 'antd'
 const PromoteBanner = () => {
 
     return (
-        <div className='py-8 md:py-10 lg:py-14 bg-pink-50 relative w-full flex'>
+        <div className='py-8 md:py-10 lg:py-14 bg-pink-50 w-full flex'>
             <div className='mx-auto w-full max-w-6xl px-5 md:px-8 lg:px-8 grid grid-cols-2 gap-6'>
                 <div>
                     <div className='mb-2 text-2xl font-bold text-pink-600 md:mb-6 md:text-3xl lg:text-4xl'>Mua vé xem

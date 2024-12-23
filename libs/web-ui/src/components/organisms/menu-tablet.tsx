@@ -50,7 +50,7 @@ const MenuTablet = () => {
   };
 
   return (
-    <div className="w-full h-[calc(100%-64px)] bg-white">
+    <div className="w-full h-[calc(100%-64px)]">
       <Menu
         style={{ width: '100%' }}
         mode="inline"
