@@ -1,4 +1,7 @@
 import './global.css';
+import { AntdRegistry } from '@ant-design/nextjs-registry';
+import { ConfigProvider } from 'antd';
+import { Header } from '@mmcinema-ui/web-ui';
 
 export const metadata = {
   title: 'Welcome to web',
@@ -12,7 +15,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AntdRegistry>
+          <ConfigProvider
+            theme={{
+              token: {
+                colorPrimary: '#d42987',
+              },
+              components: {
+                Dropdown: {
+                  controlItemBgHover: '#fef1f8',
+                },
+              },
+            }}
+          >
+            <Header />
+            {children}
+          </ConfigProvider>
+        </AntdRegistry>
+      </body>
     </html>
   );
 }
