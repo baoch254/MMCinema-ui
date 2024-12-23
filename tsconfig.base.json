@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@mmcinema-ui/web-ui": ["libs/web-ui/src/index.ts"],
+      "@mmcinema-ui/web-ui/server": ["libs/web-ui/src/server.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
