@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../../organisms/header';
 import PromoteBanner from '../../organisms/promote-banner';
 
 const HomePage = () => {
