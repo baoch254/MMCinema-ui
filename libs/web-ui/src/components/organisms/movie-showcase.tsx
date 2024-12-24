@@ -33,8 +33,8 @@ const MovieShowcase = () => {
         <>
             {(loadFinish && nowShowing && upcomingMovies) &&
                 <>
-                    <MoviesContainer nowShowing={nowShowing} isNowShowing={true}/>
-                    <MoviesContainer nowShowing={upcomingMovies} isNowShowing={false}/>
+                    <MoviesContainer movieList={nowShowing} isNowShowing={true}/>
+                    <MoviesContainer movieList={upcomingMovies} isNowShowing={false}/>
                 </>
             }
         </>

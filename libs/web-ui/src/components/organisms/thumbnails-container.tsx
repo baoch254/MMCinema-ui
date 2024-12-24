@@ -9,7 +9,7 @@ interface MovieShowcaseContainerProps {
 
 const ThumbnailsContainer = ({movies, theme} : MovieShowcaseContainerProps) => {
     return (
-        <div className='-mx-5 md:mx-0 h-full flex overflow-x-auto no-scrollbar'>
+        <div className='-mx-5 md:mx-0 h-full flex border-box no-scrollbar'>
             {movies.map((movie, i) => (
                 <MovieThumbnail
                     key={i}

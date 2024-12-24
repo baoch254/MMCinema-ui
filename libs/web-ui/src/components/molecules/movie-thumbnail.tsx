@@ -28,15 +28,16 @@ const MovieThumbnail = ({
 
     return (
         <div
-            className=" relative flex max-w-[201.6px] flex-none flex-col h-full items-start space-y-2 mr-[20px] truncate">
-                <div className="relative h-auto overflow-hidden border-blend rounded-sm">
+            className="relative flex basis-[33%] first:ml-[20px] md:first:ml-0 min-h-[200px] md:basis-[calc((100%-10%)/5)] flex-none flex-col mr-[2.5%] box-border last:mr-0 items-start space-y-2 truncate">
+                <div className="relative overflow-hidden border-blend rounded">
                     <img
-                        className=" object-fill object-center transition-transform duration-300 hover:scale-105"
+                        className="object-fill object-center transition-transform duration-300 hover:scale-105"
                         loading="lazy"
                         src={thumbnail_url}
                         alt="movie thumbnail"
                     />
-                    {theme === 'dark' && <p className={`absolute bottom-[-5px] text-6xl font-extrabold ${theme === 'dark' ? 'text-white' : 'text-black'} drop-shadow-xl`}>{rank}</p>}
+                    {theme === 'dark' && <p className={`absolute bottom-[-5px] text-5xl font-extrabold ${theme === 'dark' ? 'text-white' : 'text-black'} drop-shadow-2xl`}
+                    style={{textShadow : '3px 3px 2px black'}}>{rank}</p>}
                 </div>
             <div>
                 <p className={`${theme === 'dark' ? 'text-white' : 'text-black'} font-bold`}>{title}</p>

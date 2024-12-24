@@ -7,7 +7,7 @@ const Header = () => {
   const { isSidebarExpanded, setSidebarExpand } = useSidebarExpandStore();
   return (
     <div
-      className=" fixed h-full w-full z-40 pointer-events-none"
+      className="fixed h-full w-screen z-40 pointer-events-none"
     >
       <div className="w-full h-[64px] flex-none lg:z-50 top-0 pointer-events-auto">
         <div className=" h-full w-full px-[32px] bg-white shadow-[inset_0px_-1px_0px_0px_rgba(0,0,0,0.08)]">
