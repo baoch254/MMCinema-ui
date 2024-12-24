@@ -31,7 +31,7 @@ const MovieThumbnail = ({
             className="relative flex basis-[33%] first:ml-[20px] md:first:ml-0 md:basis-[calc((100%-10%)/5)] flex-none flex-col mr-[2.5%] box-border last:mr-0 items-start space-y-2 truncate">
                 <div className="relative overflow-hidden border-blend rounded">
                     <img
-                        className="object-fill object-center transition-transform duration-300 hover:scale-10 aspect-[2/3]"
+                        className="object-fill object-center aspect-[2/3] transition-transform duration-300 hover:scale-[1.1]"
                         loading="lazy"
                         src={thumbnail_url}
                         alt="movie thumbnail"
