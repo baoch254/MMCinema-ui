@@ -1,6 +1,6 @@
 'use client';
 import useSidebarExpandStore from '../../stores/sidebar-expand-store';
-import NavbarItems from './navbar-items';
+import NavbarItems from '../molecules/navbar-items';
 import MenuTablet from './menu-tablet';
 
 const Header = () => {

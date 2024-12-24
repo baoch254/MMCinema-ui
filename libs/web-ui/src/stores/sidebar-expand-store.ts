@@ -9,7 +9,6 @@ const useSidebarExpandStore = create<SidebarExpandStore>((set) => ({
     isSidebarExpanded: false,
     setSidebarExpand: (isSidebarExpanded) => {
       set({ isSidebarExpanded: isSidebarExpanded });
-      console.log(isSidebarExpanded)
     }
 }))
 

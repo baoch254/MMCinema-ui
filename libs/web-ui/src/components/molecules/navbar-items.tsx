@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonWithDropdown from '../molecules/button-with-dropdown';
+import ButtonWithDropdown from './button-with-dropdown';
 import { blogItems, cinemaItems, scheduleItems } from '../../constants/constants-and-types';
 import {Button} from "antd";
 
