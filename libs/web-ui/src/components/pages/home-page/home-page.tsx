@@ -4,7 +4,7 @@ import PromoteBanner from '../../organisms/promote-banner';
 
 const HomePage = () => {
   return (
-    <div className=' relative bg-pink-200 h-[2000px] w-full top-[64px]'>
+    <div className=' relative bg-pink-200 h-[2000px] w-full top-[64px] z-0'>
       <PromoteBanner/>
       Content
     </div>

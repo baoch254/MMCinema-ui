@@ -7,9 +7,9 @@ const Header = () => {
   const { isSidebarExpanded, setSidebarExpand } = useSidebarExpandStore();
   return (
     <div
-      className=" fixed h-full w-full z-40"
+      className=" fixed h-full w-full z-40 pointer-events-none"
     >
-      <div className="w-full h-[64px] flex-none lg:z-50 top-0">
+      <div className="w-full h-[64px] flex-none lg:z-50 top-0 pointer-events-auto">
         <div className=" h-full w-full px-[32px] bg-white shadow-[inset_0px_-1px_0px_0px_rgba(0,0,0,0.08)]">
           <div className="wrapper grid grid-cols-1 items-center lg:border-0 [--header-height:64px] h-full w-full">
             <div className="relative flex items-center justify-between mx-auto h-full w-full max-w-6xl">
@@ -89,7 +89,7 @@ const Header = () => {
         </div>
       </div>
       {isSidebarExpanded && (
-        <div className=" fixed top-[64px] h-full w-full lg:hidden bg-white">
+        <div className=" fixed top-[64px] h-full w-full lg:hidden bg-white pointer-events-auto">
           <MenuTablet />
         </div>
       )}
