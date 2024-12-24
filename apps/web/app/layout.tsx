@@ -4,13 +4,18 @@ import localFont from 'next/font/local';
 import NextTopLoader from 'nextjs-toploader';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages, getTranslations } from 'next-intl/server';
+import { cookies } from 'next/headers';
 
 import {
   QueryProvider,
   ThemeProvider,
   ScreenProvider,
+  SearchProvider,
 } from '@mmcinema-ui/shared-providers';
+import AppSidebar from '@mmcinema-ui/shared-ui/layout/components/organisms/app-sidebar';
+
 import { baseOpenGraph } from '@web/metadata';
+import { SidebarProvider } from '@mmcinema-ui/shadcn/ui';
 
 const font = localFont({
   src: [
@@ -55,14 +60,10 @@ export async function generateMetadata() {
   };
 }
 
-export default async function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();
-
   const messages = await getMessages();
+  const defaultOpen = cookies().get('sidebar:state')?.value === 'true';
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -77,7 +78,12 @@ export default async function RootLayout({
                 enableSystem
                 disableTransitionOnChange
               >
-                {children}
+                <SearchProvider>
+                  <SidebarProvider defaultOpen={defaultOpen}>
+                    <AppSidebar />
+                    {children}
+                  </SidebarProvider>
+                </SearchProvider>
               </ThemeProvider>
             </ScreenProvider>
           </QueryProvider>
