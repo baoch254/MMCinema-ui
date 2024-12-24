@@ -4,7 +4,7 @@ import {DownOutlined} from '@ant-design/icons';
 import {DropdownProps} from 'antd';
 import {Dropdown} from 'antd';
 import {Button} from "antd";
-import {MenuPropsWithTitle} from "../../constants/constant";
+import {MenuPropsWithTitle} from '@mmcinema-ui/web-ui';
 
 const ButtonWithDropdown: React.FC<MenuPropsWithTitle> = ({items, title}) => {
   const [open, setOpen] = useState(false);

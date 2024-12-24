@@ -1,6 +1,6 @@
 import React from 'react';
 import ButtonWithDropdown from '../molecules/button-with-dropdown';
-import { blogItems, cinemaItems, NavItems, scheduleItems } from '../../constants/constant';
+import { blogItems, cinemaItems, scheduleItems } from '../../constants/constants-and-types';
 import {Button} from "antd";
 
 const NavbarItems = () => {
