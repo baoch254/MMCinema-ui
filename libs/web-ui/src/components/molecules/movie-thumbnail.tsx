@@ -47,7 +47,7 @@ const MovieThumbnail = ({
                     </p>
                 </div>
                 <p className={`${theme === 'dark' ? 'text-white' : 'text-black'} flex items-center text-xs`}><img className='size-4' src='/star-icon.svg'
-                                                                         alt='star'/>{vote_average}</p>
+                                                                         alt='star'/>{Math.round(vote_average * 10) / 10}</p>
             </div>
         </div>
 
