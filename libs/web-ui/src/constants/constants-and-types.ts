@@ -1,5 +1,6 @@
 import type {MenuProps} from "antd";
 export type MenuItem = Required<MenuProps>['items'][number];
+export const CONTENTS_MAX_WIDTH = 'max-w-6xl'
 
 export interface MenuPropsWithTitle extends MenuProps {
     title: string,

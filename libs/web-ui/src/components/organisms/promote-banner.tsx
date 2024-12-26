@@ -1,12 +1,13 @@
 import React from 'react';
 import PrimaryNavigateButton from '../atoms/primary-navigate-button';
 import PrimaryTitle from '../atoms/primary-title';
+import { CONTENTS_MAX_WIDTH } from '@mmcinema-ui/web-ui';
 
 const PromoteBanner = () => {
 
     return (
       <div className="py-8 md:py-10 lg:py-14 bg-pink-50 w-full flex">
-        <div className="mx-auto w-full max-w-6xl px-5 md:px-8 lg:px-8 grid grid-cols-2 gap-6">
+        <div className={`mx-auto w-full ${CONTENTS_MAX_WIDTH} px-5 md:px-8 lg:px-8 grid grid-cols-2 gap-6`}>
           <div>
             <PrimaryTitle text='Mua vé xem phim Online trên MoMo'/>
             <p className="text-lg font-light text-gray-600">
