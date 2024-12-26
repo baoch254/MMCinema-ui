@@ -7,6 +7,8 @@ import SearchTextInput from './search-text-input';
 const ProvinceSelectorModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentProvince, setProvince] = useState('Tp. Hồ Chí Minh');
+  const [filteredProvinceList, setFilteredProvinceList] = useState<string[]>(PROVINCES);
+  const [searchKey, setSearchKey] = useState<string | undefined>();
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -25,10 +27,20 @@ const ProvinceSelectorModal = () => {
     setProvince(province);
   };
 
-  return (
+  const filterProvinceList = (keyword: string) => {
+    let filtered : string[] = []
+    PROVINCES.forEach((province) => {
+      if (province.toLowerCase().includes(keyword.toLowerCase())) {
+        filtered.push(province)
+      }
+    })
+    if (filtered.length > 0) setFilteredProvinceList(filtered)
+  };
+
+  return(
     <>
       <Button type="default" onClick={showModal} className="group font-semibold hover:bg-gray-50 h-9 w-40 flex"
-              style={{ justifyContent: 'left'}}>
+              style={{ justifyContent: 'left' }}>
         <div className="flex items-center mt-1 gap-1">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                className="h-4 w-4">
@@ -53,13 +65,22 @@ const ProvinceSelectorModal = () => {
                  </Button>
                </div>
              ]}>
-        <div className="px-4 md:px-10 max-h-[750px]">
+        <div className="px-4 md:px-10 h-[750px]">
           <div className="mb-6 flex items-center justify-between">
             <div className="mr-5 whitespace-nowrap text-xl font-bold text-gray-700">Chọn địa điểm</div>
-            <SearchTextInput placeholder="Tìm địa điểm ..." />
+            {/*<SearchTextInput placeholder="Tìm địa điểm ..." />*/}
+            <div className="relative">
+              <input type="text" placeholder="Tìm địa điểm ..."
+                     className="block h-9 w-full items-center justify-center rounded border border-gray-300 bg-white px-3 py-1"
+                     onChange={(e) => filterProvinceList(e.target.value)} />
+              <button type="submit" aria-label="Search"
+                      className="absolute right-2 top-2 border-none opacity-50 outline-none">
+                <img src="/search-icon.svg" className="size-5" />
+              </button>
+            </div>
           </div>
           <div className="my-3 grid grid-cols-2 gap-1 md:my-5 md:grid-cols-4 md:gap-3 max-h-[700px] overflow-y-auto">
-            {PROVINCES.map((province) => {
+            {filteredProvinceList.map((province) => {
               return (
                 <ConfigProvider
                   theme={{

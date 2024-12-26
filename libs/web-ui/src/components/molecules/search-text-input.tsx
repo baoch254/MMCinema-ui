@@ -1,10 +1,11 @@
 import React from 'react';
 
 interface Props {
-  placeholder : string
+  placeholder : string,
+  listToSearch: string[]
 }
 
-const SearchTextInput = ({placeholder} : Props) => {
+const SearchTextInput = ({placeholder, listToSearch} : Props) => {
   return (
     <div className="relative">
       <input type="text" placeholder= {placeholder}
