@@ -1,4 +1,5 @@
-const { join } = require('path');
+import tailwindCssAnimate from 'tailwindcss-animate';
+import { join } from 'path';
 
 module.exports = {
   content: [
@@ -76,6 +77,6 @@ module.exports = {
       },
     },
   },
-  plugins: ['tailwindcss-animate'],
+  plugins: [tailwindCssAnimate],
   darkMode: ['class'],
 };

@@ -17,8 +17,10 @@ import {
 
 import { useRouter } from 'next/navigation';
 import { sidebarData } from '../../data/sidebar-data';
+import { useTranslations } from 'next-intl';
 
 const CommandMenu = () => {
+  const t = useTranslations();
   const router = useRouter();
 
   const { open, setOpen } = useSearch();
@@ -33,12 +35,12 @@ const CommandMenu = () => {
 
   return (
     <CommandDialog modal open={open} onOpenChange={setOpen}>
-      <CommandInput placeholder="Type a command or search..." />
+      <CommandInput placeholder={t('CORE.search')} />
       <CommandList>
         <ScrollArea type="hover" className="h-72 pr-1">
-          <CommandEmpty>No results found.</CommandEmpty>
+          <CommandEmpty>{t('CORE.no_results_found')}</CommandEmpty>
           {sidebarData.navGroups.map((group) => (
-            <CommandGroup key={group.title} heading={group.title}>
+            <CommandGroup key={group.title} heading={t(`nav_groups.${group.title}`)}>
               {group.items.map((navItem, i) => {
                 if (navItem.url)
                   return (
@@ -52,7 +54,7 @@ const CommandMenu = () => {
                       <div className="mr-2 flex h-4 w-4 items-center justify-center">
                         <IconArrowRightDashed className="size-2 text-muted-foreground/80" />
                       </div>
-                      {navItem.title}
+                      {t(`nav_groups.${navItem.title}`)}
                     </CommandItem>
                   );
 
@@ -67,7 +69,7 @@ const CommandMenu = () => {
                     <div className="mr-2 flex h-4 w-4 items-center justify-center">
                       <IconArrowRightDashed className="size-2 text-muted-foreground/80" />
                     </div>
-                    {subItem.title}
+                    {t(`nav_groups.${subItem.title}`)}
                   </CommandItem>
                 ));
               })}

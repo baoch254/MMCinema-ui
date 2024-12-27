@@ -10,9 +10,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@mmcinema-ui/shadcn';
+import { useTranslations } from 'next-intl';
 
 const ModeTheme = () => {
   const { setTheme } = useTheme();
+
+  const t = useTranslations('CORE');
 
   return (
     <DropdownMenu>
@@ -23,9 +26,9 @@ const ModeTheme = () => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme('light')}>Light</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')}>Dark</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('system')}>System</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme('light')}>{t('light')}</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme('dark')}>{t('dark')}</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme('system')}>{t('system.title')}</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

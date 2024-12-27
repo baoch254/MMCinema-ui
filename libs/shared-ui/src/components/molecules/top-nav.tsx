@@ -11,6 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@mmcinema-ui/shadcn';
+import { useTranslations } from 'next-intl';
 
 interface TopNavProps extends React.HTMLAttributes<HTMLElement> {
   links: {
@@ -21,6 +22,7 @@ interface TopNavProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function TopNav({ className, links, ...props }: TopNavProps) {
+  const t = useTranslations('nav_groups');
   return (
     <>
       <div className="md:hidden">
@@ -34,7 +36,7 @@ export function TopNav({ className, links, ...props }: TopNavProps) {
             {links.map(({ title, href, isActive }) => (
               <DropdownMenuItem key={`${title}-${href}`} asChild>
                 <Link href={href} className={!isActive ? 'text-muted-foreground' : ''}>
-                  {title}
+                  {t(title)}
                 </Link>
               </DropdownMenuItem>
             ))}
@@ -54,7 +56,7 @@ export function TopNav({ className, links, ...props }: TopNavProps) {
               isActive ? '' : 'text-muted-foreground'
             }`}
           >
-            {title}
+            {t(title)}
           </Link>
         ))}
       </nav>

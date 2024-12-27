@@ -12,9 +12,8 @@ import {
   ScreenProvider,
   SearchProvider,
 } from '@mmcinema-ui/shared-providers';
-import AppSidebar from '@mmcinema-ui/shared-ui/layout/components/organisms/app-sidebar';
 
-import { baseOpenGraph } from '@web/metadata';
+import { baseOpenGraph } from '@admin/metadata';
 import { SidebarProvider } from '@mmcinema-ui/shadcn';
 
 const font = localFont({
@@ -79,10 +78,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 disableTransitionOnChange
               >
                 <SearchProvider>
-                  <SidebarProvider defaultOpen={defaultOpen}>
-                    <AppSidebar />
-                    {children}
-                  </SidebarProvider>
+                  <SidebarProvider defaultOpen={defaultOpen}>{children}</SidebarProvider>
                 </SearchProvider>
               </ThemeProvider>
             </ScreenProvider>

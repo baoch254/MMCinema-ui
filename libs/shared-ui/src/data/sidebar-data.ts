@@ -19,7 +19,6 @@ import {
   IconUserOff,
   IconUsers,
 } from '@tabler/icons-react';
-import { AudioWaveform, Command, GalleryVerticalEnd } from 'lucide-react';
 import { type SidebarData } from '../types';
 
 export const sidebarData: SidebarData = {
@@ -28,110 +27,93 @@ export const sidebarData: SidebarData = {
     email: 'satnaingdev@gmail.com',
     avatar: '/avatars/shadcn.jpg',
   },
-  teams: [
-    {
-      name: 'Shadcn Admin',
-      logo: Command,
-      plan: 'Vite + ShadcnUI',
-    },
-    {
-      name: 'Acme Inc',
-      logo: GalleryVerticalEnd,
-      plan: 'Enterprise',
-    },
-    {
-      name: 'Acme Corp.',
-      logo: AudioWaveform,
-      plan: 'Startup',
-    },
-  ],
   navGroups: [
     {
-      title: 'General',
+      title: 'general',
       items: [
         {
-          title: 'Dashboard',
+          title: 'dashboard',
           url: '/',
           icon: IconLayoutDashboard,
         },
         {
-          title: 'Tasks',
+          title: 'tasks',
           url: '/tasks',
           icon: IconChecklist,
         },
         {
-          title: 'Apps',
+          title: 'apps',
           url: '/apps',
           icon: IconPackages,
         },
         {
-          title: 'Chats',
+          title: 'chats',
           url: '/chats',
           badge: '3',
           icon: IconMessages,
         },
         {
-          title: 'Users',
+          title: 'users',
           url: '/users',
           icon: IconUsers,
         },
       ],
     },
     {
-      title: 'Pages',
+      title: 'pages',
       items: [
         {
-          title: 'Auth',
+          title: 'auth',
           icon: IconLockAccess,
           items: [
             {
-              title: 'Sign In',
+              title: 'signIn',
               url: '/sign-in',
             },
             {
-              title: 'Sign In (2 Col)',
+              title: 'signIn2Col',
               url: '/sign-in-2',
             },
             {
-              title: 'Sign Up',
+              title: 'signUp',
               url: '/sign-up',
             },
             {
-              title: 'Forgot Password',
+              title: 'forgotPassword',
               url: '/forgot-password',
             },
             {
-              title: 'OTP',
+              title: 'otp',
               url: '/otp',
             },
           ],
         },
         {
-          title: 'Errors',
+          title: 'errors',
           icon: IconBug,
           items: [
             {
-              title: 'Unauthorized',
+              title: 'unauthorized',
               url: '/401',
               icon: IconLock,
             },
             {
-              title: 'Forbidden',
+              title: 'forbidden',
               url: '/403',
               icon: IconUserOff,
             },
             {
-              title: 'Not Found',
+              title: 'notFound',
               url: '/404',
               icon: IconError404,
             },
             {
-              title: 'Internal Server Error',
+              title: 'internalServerError',
               url: '/500',
               icon: IconServerOff,
             },
             {
-              title: 'Maintenance Error',
+              title: 'maintenanceError',
               url: '/503',
               icon: IconBarrierBlock,
             },
@@ -140,41 +122,41 @@ export const sidebarData: SidebarData = {
       ],
     },
     {
-      title: 'Other',
+      title: 'other',
       items: [
         {
-          title: 'Settings',
+          title: 'settings',
           icon: IconSettings,
           items: [
             {
-              title: 'Profile',
+              title: 'profile',
               url: '/settings',
               icon: IconUserCog,
             },
             {
-              title: 'Account',
+              title: 'account',
               url: '/settings/account',
               icon: IconTool,
             },
             {
-              title: 'Appearance',
+              title: 'appearance',
               url: '/settings/appearance',
               icon: IconPalette,
             },
             {
-              title: 'Notifications',
+              title: 'notifications',
               url: '/settings/notifications',
               icon: IconNotification,
             },
             {
-              title: 'Display',
+              title: 'display',
               url: '/settings/display',
               icon: IconBrowserCheck,
             },
           ],
         },
         {
-          title: 'Help Center',
+          title: 'helpCenter',
           url: '/help-center',
           icon: IconHelp,
         },
