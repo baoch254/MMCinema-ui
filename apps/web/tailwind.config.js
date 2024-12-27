@@ -1,4 +1,4 @@
-const SharedTailwindConfig = require('../../libs/shadcn/utils/src/tailwind/tailwind.config');
+const SharedTailwindConfig = require('../../libs/shadcn/src/utils/tailwind/tailwind.config');
 
 module.exports = {
   ...SharedTailwindConfig,

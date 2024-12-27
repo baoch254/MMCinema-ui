@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
-import { ScreenType } from '@mmcinema-ui/shared-utils';
+import { ScreenType } from '@mmcinema-ui/shared-common';
 
 const ScreenContext = createContext<{
   deviceType: ScreenType;
@@ -45,9 +45,7 @@ const ScreenProvider = ({ children }: ScreenProviderProps) => {
     return { screenWidth, deviceType };
   }, [screenWidth, deviceType]);
 
-  return (
-    <ScreenContext.Provider value={data}>{children}</ScreenContext.Provider>
-  );
+  return <ScreenContext.Provider value={data}>{children}</ScreenContext.Provider>;
 };
 
 type ScreenPropsType = {
@@ -65,13 +63,7 @@ type ScreenPropsType = {
     }
 );
 
-const Screen = ({
-  fallback = null,
-  children,
-  device,
-  accept,
-  deny,
-}: ScreenPropsType) => {
+const Screen = ({ fallback = null, children, device, accept, deny }: ScreenPropsType) => {
   const { deviceType } = useContext(ScreenContext);
   if (accept) {
     if (device === deviceType) {

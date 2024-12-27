@@ -3,14 +3,14 @@
   "style": "new-york",
   "rsc": false,
   "tailwind": {
-    "config": "libs/shadcn/utils/src/tailwind/tailwind.config.js",
-    "css": "libs/shadcn/utils/src/styles/global.css",
+    "config": "libs/shadcn/src/utils/tailwind/tailwind.config.js",
+    "css": "libs/shadcn/src/utils/styles/global.css",
     "baseColor": "slate",
     "cssVariables": true
   },
   "aliases": {
-    "components": "libs/shadcn/ui/src/lib",
-    "utils": "libs/shadcn/utils/src/lib",
-    "hooks": "libs/shared-hooks/src/lib"
+    "components": "libs/shadcn/src",
+    "utils": "libs/shadcn/src/utils",
+    "hooks": "libs/shared-hooks/src"
   }
 }

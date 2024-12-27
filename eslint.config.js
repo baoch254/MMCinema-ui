@@ -7,7 +7,7 @@ module.exports = [
   ...nx.configs['flat/javascript'],
   ...pluginQuery.configs['flat/recommended'],
   {
-    ignores: ['**/dist', '**/node_modules', '**/ckeditor5/build/**'],
+    ignores: ['**/dist', '**/node_modules'],
   },
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
@@ -17,7 +17,7 @@ module.exports = [
         {
           enforceBuildableLibDependency: true,
           allowCircularSelfDependency: true,
-          allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?js$', 'libs/shadcn/ui/src/.*'],
+          allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?js$'],
           depConstraints: [
             {
               sourceTag: '*',
