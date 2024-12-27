@@ -13,7 +13,7 @@ import {
   CommandList,
   CommandSeparator,
   ScrollArea,
-} from '@mmcinema-ui/shadcn/ui';
+} from '@mmcinema-ui/shadcn';
 
 import { useRouter } from 'next/navigation';
 import { sidebarData } from '../../data/sidebar-data';

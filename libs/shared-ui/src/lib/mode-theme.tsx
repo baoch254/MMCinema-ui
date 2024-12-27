@@ -3,13 +3,13 @@
 import { useTheme } from 'next-themes';
 import { MoonIcon, SunIcon } from 'lucide-react';
 
-import { Button } from '@mmcinema-ui/shadcn/ui';
+import { Button } from '@mmcinema-ui/shadcn';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@mmcinema-ui/shadcn/ui';
+} from '@mmcinema-ui/shadcn';
 
 const ModeTheme = () => {
   const { setTheme } = useTheme();

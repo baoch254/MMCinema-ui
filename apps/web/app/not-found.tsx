@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { ArrowLeft } from 'lucide-react';
 
-import { Button, Card } from '@mmcinema-ui/shadcn/ui';
+import { Button, Card } from '@mmcinema-ui/shadcn';
 
 const NotFoundPage = () => {
   const t = useTranslations('CORE');

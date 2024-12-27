@@ -15,7 +15,7 @@ import {
 import AppSidebar from '@mmcinema-ui/shared-ui/layout/components/organisms/app-sidebar';
 
 import { baseOpenGraph } from '@web/metadata';
-import { SidebarProvider } from '@mmcinema-ui/shadcn/ui';
+import { SidebarProvider } from '@mmcinema-ui/shadcn';
 
 const font = localFont({
   src: [

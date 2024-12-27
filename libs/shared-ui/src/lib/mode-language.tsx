@@ -13,7 +13,7 @@ import {
   Avatar,
   AvatarImage,
   AvatarFallback,
-} from '@mmcinema-ui/shadcn/ui';
+} from '@mmcinema-ui/shadcn';
 
 const ModeLanguage = () => {
   const locale = useLocale();
@@ -26,8 +26,7 @@ const ModeLanguage = () => {
     onClick: () => languages.localeLang.setUserLocale(lang),
   }));
 
-  const currentLang =
-    listLanguages.find((lang) => lang.key === locale) ?? listLanguages[0];
+  const currentLang = listLanguages.find((lang) => lang.key === locale) ?? listLanguages[0];
 
   return (
     <DropdownMenu>

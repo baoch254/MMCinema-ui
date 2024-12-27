@@ -2,8 +2,6 @@
 
 import React from 'react';
 
-import { CommandMenu } from '@mmcinema-ui/shared-ui/layout/components/molecules/command-menu';
-
 interface SearchContextType {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -29,12 +27,7 @@ export function SearchProvider({ children }: Props) {
     return () => document.removeEventListener('keydown', down);
   }, []);
 
-  return (
-    <SearchContext.Provider value={{ open, setOpen }}>
-      {children}
-      <CommandMenu />
-    </SearchContext.Provider>
-  );
+  return <SearchContext.Provider value={{ open, setOpen }}>{children}</SearchContext.Provider>;
 }
 
 export const useSearch = () => {

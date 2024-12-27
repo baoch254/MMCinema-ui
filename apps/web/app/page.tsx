@@ -36,7 +36,7 @@ const DashboardPage = () => {
       <Header>
         <TopNav links={topNav} />
         <div className="ml-auto flex items-center space-x-4">
-          <Search />
+          <Search isMain />
           <ModeTheme />
           <ModeLanguage />
           <ProfileDropdown />

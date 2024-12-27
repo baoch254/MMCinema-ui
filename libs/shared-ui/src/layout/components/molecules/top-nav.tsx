@@ -2,14 +2,15 @@
 
 import Link from 'next/link';
 import { IconMenu } from '@tabler/icons-react';
-import { cn } from '@mmcinema-ui/shadcn/utils';
+
 import {
+  cn,
   Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@mmcinema-ui/shadcn/ui';
+} from '@mmcinema-ui/shadcn';
 
 interface TopNavProps extends React.HTMLAttributes<HTMLElement> {
   links: {

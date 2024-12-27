@@ -24,12 +24,12 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
   useSidebar,
-} from '@mmcinema-ui/shadcn/ui';
+} from '@mmcinema-ui/shadcn';
 
-import { NavCollapsible, NavItem, NavLink, type NavGroup } from '../../types';
+import { NavCollapsible, NavItem, NavLink, type NavGroupType } from '../../types';
 import { usePathname } from 'next/navigation';
 
-export function NavGroup({ title, items }: NavGroup) {
+export function NavGroup({ title, items }: NavGroupType) {
   const { state } = useSidebar();
 
   const pathname = usePathname();

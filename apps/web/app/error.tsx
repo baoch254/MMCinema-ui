@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { RefreshCcw } from 'lucide-react';
 
-import { Button, Card } from '@mmcinema-ui/shadcn/ui';
+import { Button, Card } from '@mmcinema-ui/shadcn';
 
 export default function Error({
   error,

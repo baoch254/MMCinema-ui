@@ -6,7 +6,7 @@ import {
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
-} from '@mmcinema-ui/shadcn/ui';
+} from '@mmcinema-ui/shadcn';
 import { NavGroup } from '../molecules/nav-group';
 import { NavUser } from '../molecules/nav-user';
 import { TeamSwitcher } from '../molecules/team-switcher';

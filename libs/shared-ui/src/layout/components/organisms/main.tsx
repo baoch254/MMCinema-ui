@@ -1,5 +1,6 @@
 import React from 'react';
-import { cn } from '@mmcinema-ui/shadcn/utils';
+
+import { cn } from '@mmcinema-ui/shadcn';
 
 interface MainProps extends React.HTMLAttributes<React.ElementRef<'main'>> {
   fixed?: boolean;

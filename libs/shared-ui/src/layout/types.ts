@@ -28,7 +28,7 @@ type NavCollapsible = BaseNavItem & {
 
 type NavItem = NavCollapsible | NavLink;
 
-interface NavGroup {
+interface NavGroupType {
   title: string;
   items: NavItem[];
 }
@@ -36,7 +36,7 @@ interface NavGroup {
 interface SidebarData {
   user: User;
   teams: Team[];
-  navGroups: NavGroup[];
+  navGroups: NavGroupType[];
 }
 
-export type { SidebarData, NavGroup, NavItem, NavCollapsible, NavLink };
+export type { SidebarData, NavGroupType, NavItem, NavCollapsible, NavLink };

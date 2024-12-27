@@ -1,9 +1,8 @@
 'use client';
 
 import React from 'react';
-import { cn } from '@mmcinema-ui/shadcn/utils';
-import { Separator } from '@mmcinema-ui/shadcn/ui';
-import { SidebarTrigger } from '@mmcinema-ui/shadcn/ui';
+
+import { cn, Separator, SidebarTrigger } from '@mmcinema-ui/shadcn';
 
 interface HeaderProps extends React.HTMLAttributes<React.ElementRef<'header'>> {
   sticky?: boolean;
