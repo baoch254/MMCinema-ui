@@ -1,8 +1,7 @@
 import React from 'react';
 import { CONTENTS_MAX_WIDTH } from '@mmcinema-ui/web-ui';
 import PrimarySubTitle from '../atoms/primary-sub-title';
-import ProvinceSelectorModal from '../molecules/province-selector-modal';
-import { Button } from 'antd';
+import LocationSelect from '../molecules/location-select';
 
 
 const MoviesSchedule = () => {
@@ -14,16 +13,7 @@ const MoviesSchedule = () => {
         <div className='mb-5 text-center md:mb-8'>
           <PrimarySubTitle text='Lịch chiếu phim' color='pink'/>
         </div>
-        <div className='md:shadow-custom rounded-[0.5rem] border-gray-200 bg-white md:overflow-hidden md:border'>
-          <div className='relative z-10'>
-            <div className='flex items-center  pt-3 md:px-4'>
-              <div className='mr-3 hidden md:block'>Vị trí</div>
-              <div className='h-full'><ProvinceSelectorModal/></div>
-              <Button type='default'>Gần bạn</Button>
-            </div>
-
-          </div>
-        </div>
+        <LocationSelect/>
       </div>
     </div>
   );
