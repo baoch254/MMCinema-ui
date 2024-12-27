@@ -13,7 +13,7 @@ module.exports = [
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     rules: {
       '@nx/enforce-module-boundaries': [
-        'off',
+        'warn',
         {
           enforceBuildableLibDependency: true,
           allowCircularSelfDependency: true,
