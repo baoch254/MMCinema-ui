@@ -1,14 +1,17 @@
 'use client';
 import React, { useState } from 'react';
 import { Modal, Button, ConfigProvider } from 'antd';
-import { PROVINCES } from '../../constants/constants-and-types';
-import SearchTextInput from './search-text-input';
+import { PRIMARY_COLOR, PROVINCES } from '../../constants/constants-and-types';
+import { DownOutlined } from '@ant-design/icons';
 
-const ProvinceSelectorModal = () => {
+interface Props {
+  currentSelected: 'province' | 'near you';
+}
+
+const ProvinceSelectorModal = ({ currentSelected }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentProvince, setProvince] = useState('Tp. Hồ Chí Minh');
   const [filteredProvinceList, setFilteredProvinceList] = useState<string[]>(PROVINCES);
-  const [searchKey, setSearchKey] = useState<string | undefined>();
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -27,32 +30,64 @@ const ProvinceSelectorModal = () => {
     setProvince(province);
   };
 
-  const filterProvinceList = (keyword: string) => {
-    let filtered : string[] = []
-    PROVINCES.forEach((province) => {
-      if (province.toLowerCase().includes(keyword.toLowerCase())) {
-        filtered.push(province)
-      }
-    })
-    if (filtered.length > 0) setFilteredProvinceList(filtered)
+  const removeDiacritics = (str: string) => {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, ''); // Remove diacritics
   };
 
-  return(
+  const filterProvinceList = (keyword: string) => {
+    const normalizedKeyword = removeDiacritics(keyword.toLowerCase().trim());
+
+    const filtered = PROVINCES.filter((province) => {
+      const normalizedProvince = removeDiacritics(province.toLowerCase());
+      return normalizedProvince.includes(normalizedKeyword);
+    });
+
+    setFilteredProvinceList(filtered);
+  };
+
+  return (
     <>
-      <Button type="default" onClick={showModal} className="group font-semibold hover:bg-gray-50 h-9 w-40 flex"
-              style={{ justifyContent: 'left' }}>
-        <div className="flex items-center mt-1 gap-1">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-               className="h-4 w-4">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      <ConfigProvider
+        theme={{
+          components: {
+            Button: {
+              defaultBorderColor: `${currentSelected === 'province' ? `${PRIMARY_COLOR}` : ''}`,
+              defaultColor: `${currentSelected === 'province' ? `${PRIMARY_COLOR}` : ''}`,
+              boxShadow: '0 0 0 rgba(0, 0, 0, 0.02)'
+            }
+          }
+        }}
+      >
+        <Button type="default" onClick={showModal} className="h-full w-40 flex"
+                style={{ padding: 0 }}>
+          <div className="relative flex items-center gap-1 w-full h-full">
+            <div className="absolute left-2 flex gap-1 items-center font-semibold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="h-4 w-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  className="jsx-ef3e391d68e5bac"></path>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  className="jsx-ef3e391d68e5bac"></path>
-          </svg>
-          {currentProvince}
-        </div>
-      </Button>
+                ></path>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+              </svg>
+              {currentProvince}
+            </div>
+            <DownOutlined className="absolute right-2" />
+          </div>
+        </Button>
+      </ConfigProvider>
       <Modal open={isModalOpen}
              onCancel={handleCancel}
              title={<button></button>}
@@ -86,8 +121,8 @@ const ProvinceSelectorModal = () => {
                   theme={{
                     components: {
                       Button: {
-                        defaultBorderColor: `${currentProvince === province ? '#cb0c70' : ''}`,
-                        defaultColor: `${currentProvince === province ? '#cb0c70' : ''}`,
+                        defaultBorderColor: `${currentProvince === province ? `${PRIMARY_COLOR}` : ''}`,
+                        defaultColor: `${currentProvince === province ? `${PRIMARY_COLOR}` : ''}`,
                         boxShadow: '0 0 0 rgba(0, 0, 0, 0.02)'
                       }
                     }
