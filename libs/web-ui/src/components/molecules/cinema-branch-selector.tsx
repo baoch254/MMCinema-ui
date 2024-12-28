@@ -1,33 +1,41 @@
 import React, { useEffect, useState } from 'react';
-import { CinemaBrandKey, CINEMAS } from '@mmcinema-ui/shared-common';
+import { CinemaBranch, CINEMAS } from '@mmcinema-ui/shared-common';
 import useCinemaBrandStore from '../../stores/cinema-brand-store';
 import useProvinceStore from '../../stores/province-store';
 
 
 const CinemaBranchSelector = () => {
 
-  const { selectedBrand, setSelectedBrand } = useCinemaBrandStore();
-  const { selectedProvince, setSelectedProvince } = useProvinceStore()
-  const [cinemaList, setCinemaList] = useState<{id: string, name: string, address: string}[]>()
+  const { selectedBrand } = useCinemaBrandStore();
+  const { selectedProvince } = useProvinceStore();
+  const [cinemaList, setCinemaList] = useState<CinemaBranch[]>([]);
 
-  const listCinemasByBrandInProvince = (provinceName: string, brandKey: CinemaBrandKey) => {
-    const province = CINEMAS.find((p) => p.name === provinceName);
+  const listCinemasByBrandInProvince = (provinceName: string, brandName: string) => {
+    const province = CINEMAS.find((p) => p.province === provinceName);
 
     if (!province) {
       return [];
     }
-    if (!(brandKey in province.brands)) {
+
+    if (brandName === 'All') {
+      return province.branches
+    }
+
+    const cinemas = province.branches.filter((cinema) => cinema.brand === brandName);
+
+    if (!cinemas) {
       return [];
     }
-    return province.brands[brandKey as keyof typeof province.brands];
+    return cinemas;
   };
 
   useEffect(() => {
-    setCinemaList(listCinemasByBrandInProvince(selectedProvince, selectedBrand))
-  }, [selectedBrand, selectedProvince])
+    setCinemaList(listCinemasByBrandInProvince(selectedProvince, selectedBrand));
+  }, [selectedBrand, selectedProvince]);
 
   return (
-    <div className="border-r border-gray-200 min-h-[300px] h-[550px] overflow-y-auto relative  mx-0 divide-y divide-gray-100">
+    <div
+      className="border-r border-gray-200 min-h-[300px] h-[550px] overflow-y-auto relative  mx-0 divide-y divide-gray-100">
       <div className="relative z-20 px-3 py-2"><input type="text" placeholder="Tìm theo tên rạp ..."
                                                       className="block h-9 w-full items-center justify-center rounded border border-gray-200 bg-gray-50 py-1 pl-3 pr-10 text-sm"
                                                       value="" />
@@ -36,8 +44,8 @@ const CinemaBranchSelector = () => {
       </div>
       {
         (cinemaList && cinemaList.length !== 0) ? cinemaList.map((cinema) => {
-          return <div>{cinema.name}</div>
-        }) :
+            return <div>{cinema.name}</div>;
+          }) :
           <div>Không tìm thấy rạp nào</div>
       }
     </div>

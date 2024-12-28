@@ -1,14 +1,13 @@
 import {create} from 'zustand';
-import { CinemaBrandKey } from '@mmcinema-ui/shared-common';
 
 interface CinemaBrandStore {
-  selectedBrand : CinemaBrandKey,
-  setSelectedBrand : (selectedBrand : CinemaBrandKey) => void
+  selectedBrand : string,
+  setSelectedBrand : (selectedBrand : string) => void
 }
 
 const useCinemaBrandStore = create<CinemaBrandStore>((set) => ({
   selectedBrand: 'All',
-  setSelectedBrand: (selectedBrand : CinemaBrandKey) => {
+  setSelectedBrand: (selectedBrand : string) => {
     set({ selectedBrand: selectedBrand });
   }
 }))

@@ -3,7 +3,7 @@ import type { MenuProps } from 'antd';
 export type MenuItem = Required<MenuProps>['items'][number];
 export const CONTENTS_MAX_WIDTH = 'max-w-6xl';
 
-export const PRIMARY_COLOR = '#cb0c70'
+export const PRIMARY_COLOR = '#cb0c70';
 
 export interface MenuPropsWithTitle extends MenuProps {
   title: string,
@@ -295,177 +295,136 @@ export const PROVINCES = [
   'Yên Bái'
 ];
 
-export type CinemaBrandKey =
-  | 'All'
-  | 'CGV'
-  | 'Lotte'
-  | 'GalaxyCinemas'
-  | 'BHDStar'
-  | 'BetaCinemas'
-  | 'Cinestar'
-  | 'MegaGS'
-  | 'Cinemax'
-  | 'DCine';
+export type CinemaBranch = {
+  id: string,
+  name: string,
+  address: string,
+  brand: string
+}
 
-export const CINEMA_BRANDS: Record<CinemaBrandKey, { name: string; logo_url: string }> = {
-  All: {
-    name: 'Tất cả',
-    logo_url: '/dexuat-icon.svg'
-  },
-  CGV: {
+export const CINEMA_BRANDS = [
+  {
     name: 'CGV',
-    logo_url: '/cgv-logo.png',
+    logo_url: '/cgv-logo.png'
   },
-  Lotte: {
+  {
     name: 'Lotte Cinema',
-    logo_url: '/lotte-logo.png',
+    logo_url: '/lotte-logo.png'
   },
-  GalaxyCinemas: {
+  {
     name: 'Galaxy Cinemas',
-    logo_url: '/galaxy-cinema-logo.png',
+    logo_url: '/galaxy-cinema-logo.png'
   },
-  BHDStar: {
+  {
     name: 'BHD Star',
-    logo_url: '/bhd-logo.png',
+    logo_url: '/bhd-logo.png'
   },
-  BetaCinemas: {
+  {
     name: 'Beta Cinemas',
-    logo_url: '/beta-cinemas-logo.png',
+    logo_url: '/beta-cinemas-logo.png'
   },
-  Cinestar: {
+  {
     name: 'Cinestar',
-    logo_url: '/cinestar-logo.png',
+    logo_url: '/cinestar-logo.png'
   },
-  MegaGS: {
+  {
     name: 'MegaGS',
-    logo_url: '/megags-logo.png',
+    logo_url: '/megags-logo.png'
   },
-  Cinemax: {
+  {
     name: 'Cinemax',
-    logo_url: '/cinemax-logo.png',
+    logo_url: '/cinemax-logo.png'
   },
-  DCine: {
+  {
     name: 'Dcine',
-    logo_url: '/dcine-logo.png',
-  },
-};
-
+    logo_url: '/dcine-logo.png'
+  }
+];
 
 
 export const CINEMAS = [
   {
-    id: 'hcm',
-    name: 'Hồ Chí Minh',
-    brands: {
-      All: [
-        {
-          id: 'tat-ca',
-          name: 'Tất cả',
-          address: 'Tất cả'
-        }
-      ],
-      CGV: [
-        {
-          id: 'cgv-su-van-hanh',
-          name: 'CGV Sư Vạn Hạnh',
-          address: 'Tầng 6, Vạn Hạnh Mall, 11 Sư Vạn Hạnh, Phường 12, Quận 10',
-        },
-        {
-          id: 'cgv-crescent-mall',
-          name: 'CGV Crescent Mall',
-          address: 'Tầng 5, Crescent Mall, Phú Mỹ Hưng, Quận 7',
-        },
-      ],
-      Lotte: [
-        {
-          id: 'lotte-cong-hoa',
-          name: 'Lotte Cộng Hòa',
-          address: 'Tầng 4 Pico Plaza, 20 Cộng Hòa, Phường 12, Quận Tân Bình',
-        },
-        {
-          id: 'lotte-nam-sai-gon',
-          name: 'Lotte Nam Sài Gòn',
-          address: 'Tầng 3, TTTM Lotte, số 469 đường Nguyễn Hữu Thọ, P.Tân Hưng, Quận 7'
-        },
-      ],
-      GalaxyCinemas: [
-        {
-          id: 'galaxy-trung-chanh',
-          name: 'Galaxy Trung Chánh',
-          address: 'Hông Trung Tâm Văn Hóa Quận 12 Nguyễn Ảnh Thủ, P, 09 QL22, Trung Mỹ Tây, TP. HCM'
-        },
-        {
-          id: 'galaxy-kinh-duong-vuong',
-          name: 'Galaxy Kinh Dương Vương',
-          address: '718bis Kinh Dương Vương, Phường 13, Quận 6, Thành phố Hồ Chí Minh'
-        }
-      ]
-    },
+    province: 'Hồ Chí Minh',
+    branches: [
+      {
+        id: 'cgv-su-van-hanh',
+        name: 'CGV Sư Vạn Hạnh',
+        address: 'Tầng 6, Vạn Hạnh Mall, 11 Sư Vạn Hạnh, Phường 12, Quận 10',
+        brand: 'CGV'
+      },
+      {
+        id: 'cgv-crescent-mall',
+        name: 'CGV Crescent Mall',
+        address: 'Tầng 5, Crescent Mall, Phú Mỹ Hưng, Quận 7',
+        brand: 'CGV'
+      },
+      {
+        id: 'lotte-cong-hoa',
+        name: 'Lotte Cộng Hòa',
+        address: 'Tầng 4 Pico Plaza, 20 Cộng Hòa, Phường 12, Quận Tân Bình',
+        brand: 'Lotte Cinema'
+      },
+      {
+        id: 'lotte-nam-sai-gon',
+        name: 'Lotte Nam Sài Gòn',
+        address: 'Tầng 3, TTTM Lotte, số 469 đường Nguyễn Hữu Thọ, P.Tân Hưng, Quận 7',
+        brand: 'Lotte Cinema'
+      },
+      {
+        id: 'galaxy-trung-chanh',
+        name: 'Galaxy Trung Chánh',
+        address: 'Hông Trung Tâm Văn Hóa Quận 12 Nguyễn Ảnh Thủ, P, 09 QL22, Trung Mỹ Tây, TP. HCM',
+        brand: 'Galaxy Cinemas'
+      },
+      {
+        id: 'galaxy-kinh-duong-vuong',
+        name: 'Galaxy Kinh Dương Vương',
+        address: '718bis Kinh Dương Vương, Phường 13, Quận 6, Thành phố Hồ Chí Minh',
+        brand: 'Galaxy Cinemas'
+      }
+    ]
   },
   {
-    id: 'hn',
-    name: 'Hà Nội',
-    brands: {
-      All: [
-        {
-          id: 'cgv-aeon-ha-dong',
-          name: 'CGV Aeon Hà Đông',
-          address: 'Tầng 3, 4 | TTTM AEON MALL HÀ ĐÔNG, P. Dương Nội, Q. Hà Đông, Hà Nội',
-        },
-        {
-          id: 'cgv-aeon-long-bien',
-          name: 'CGV Aeon Long Biên',
-          address: 'Tầng 4 - TTTM AEON Long Biên, Số 27 Cổ Linh, Quận Long Biên, Hà Nội',
-        },
-        {
-          id: 'lotte-west-lake',
-          name: 'Lotte West Lake',
-          address: 'Tầng 4 Lotte Mall West Lake Hanoi, 683 Lạc Long Quân, Tây Hồ, Hà Nội',
-        },
-        {
-          id: 'lotte-thang-long',
-          name: 'Lotte Thăng Long',
-          address: 'Tầng 3, TTTM Big C Thăng Long, Số 222 Trần Duy Hưng, P.Trung Hoà, Q.Cầu Giấy',
-        }
-      ],
-      CGV: [
-        {
-          id: 'cgv-aeon-ha-dong',
-          name: 'CGV Aeon Hà Đông',
-          address: 'Tầng 3, 4 | TTTM AEON MALL HÀ ĐÔNG, P. Dương Nội, Q. Hà Đông, Hà Nội',
-        },
-        {
-          id: 'cgv-aeon-long-bien',
-          name: 'CGV Aeon Long Biên',
-          address: 'Tầng 4 - TTTM AEON Long Biên, Số 27 Cổ Linh, Quận Long Biên, Hà Nội',
-        }
-      ],
-      Lotte: [
-        {
-          id: 'lotte-west-lake',
-          name: 'Lotte West Lake',
-          address: 'Tầng 4 Lotte Mall West Lake Hanoi, 683 Lạc Long Quân, Tây Hồ, Hà Nội',
-        },
-        {
-          id: 'lotte-thang-long',
-          name: 'Lotte Thăng Long',
-          address: 'Tầng 3, TTTM Big C Thăng Long, Số 222 Trần Duy Hưng, P.Trung Hoà, Q.Cầu Giấy',
-        }
-      ],
-      GalaxyCinemas: [
-        {
-          id: 'galaxy-mipec-long-bien',
-          name: 'Galaxy Mipec Long Biên',
-          address: 'Lầu 6 | Mipec Riverside Long Biên, số 2 Long Biên, Ngọc Lâm, Long Biên, Tp.Hà Nội',
-        },
-        {
-          id: 'galaxy-trang-thi',
-          name: 'Galaxy Tràng Thi',
-          address: 'Lầu 4 | TTTM Nguyễn Kim, 10B Tràng Thi, Hàng Trống, Hoàn Kiếm, TP. Hà Nội',
-        }
-      ]
-    },
-  },
+    province: 'Hà Nội',
+    branches: [
+      {
+        id: 'cgv-aeon-ha-dong',
+        name: 'CGV Aeon Hà Đông',
+        address: 'Tầng 3, 4 | TTTM AEON MALL HÀ ĐÔNG, P. Dương Nội, Q. Hà Đông, Hà Nội',
+        brand: 'CGV'
+      },
+      {
+        id: 'cgv-aeon-long-bien',
+        name: 'CGV Aeon Long Biên',
+        address: 'Tầng 4 - TTTM AEON Long Biên, Số 27 Cổ Linh, Quận Long Biên, Hà Nội',
+        brand: 'CGV'
+      },
+      {
+        id: 'lotte-west-lake',
+        name: 'Lotte West Lake',
+        address: 'Tầng 4 Lotte Mall West Lake Hanoi, 683 Lạc Long Quân, Tây Hồ, Hà Nội',
+        brand: 'Lotte Cinema'
+      },
+      {
+        id: 'lotte-thang-long',
+        name: 'Lotte Thăng Long',
+        address: 'Tầng 3, TTTM Big C Thăng Long, Số 222 Trần Duy Hưng, P.Trung Hoà, Q.Cầu Giấy',
+        brand: 'Lotte Cinema'
+      },
+      {
+        id: 'galaxy-mipec-long-bien',
+        name: 'Galaxy Mipec Long Biên',
+        address: 'Lầu 6 | Mipec Riverside Long Biên, số 2 Long Biên, Ngọc Lâm, Long Biên, Tp.Hà Nội',
+        brand: 'Galaxy Cinemas'
+      },
+      {
+        id: 'galaxy-trang-thi',
+        name: 'Galaxy Tràng Thi',
+        address: 'Lầu 4 | TTTM Nguyễn Kim, 10B Tràng Thi, Hàng Trống, Hoàn Kiếm, TP. Hà Nội',
+        brand: 'Galaxy Cinemas'
+      }
+    ]
+  }
 ];
 
 
