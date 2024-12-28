@@ -2,4 +2,3 @@
 
 export { default as HomePage } from './components/pages/home-page/home-page';
 export { default as Header } from './components/organisms/header';
-export * from './constants/constants-and-types'

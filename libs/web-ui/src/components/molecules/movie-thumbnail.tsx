@@ -1,5 +1,5 @@
 import React from 'react';
-import getGenre from '../../utils-functions/get-genre-list';
+import { getGenre } from '@mmcinema-ui/shared-utils';
 import MovieThumbnailImage from '../atoms/movie-thumbnail';
 
 interface MovieThumbnailProps {

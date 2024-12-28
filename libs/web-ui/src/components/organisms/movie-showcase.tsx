@@ -1,9 +1,9 @@
 'use client'
 import React, {useEffect, useState} from 'react';
-import getMovies from '../../utils-functions/get-movie-info'
-import {MovieType} from '../../constants/constants-and-types'
-import {sortByScore} from "../../utils-functions/sort-by-score";
-import {getNowShowingMoviews, getUpcomingMovies} from "../../utils-functions/date-categorizer";
+import { getMovieInfo } from '@mmcinema-ui/shared-utils'
+import {MovieType} from '@mmcinema-ui/shared-common'
+import { sortByScore } from '@mmcinema-ui/shared-utils';
+import {getNowShowingMoviews, getUpcomingMovies} from "@mmcinema-ui/shared-utils";
 import MoviesContainer from "./movies-container";
 
 const MovieShowcase = () => {
@@ -13,7 +13,7 @@ const MovieShowcase = () => {
 
     useEffect(() => {
         const fetchMovies = async () => {
-            const data = await getMovies();
+            const data = await getMovieInfo();
             setNowShowing(sortByScore(getNowShowingMoviews(data), 'desc'));
             setUpcomingMovies(getUpcomingMovies(data));
         };
@@ -30,14 +30,14 @@ const MovieShowcase = () => {
 
 
     return (
-        <>
+        <div>
             {(loadFinish && nowShowing && upcomingMovies) &&
                 <>
                     <MoviesContainer movieList={nowShowing} isNowShowing={true}/>
                     <MoviesContainer movieList={upcomingMovies} isNowShowing={false}/>
                 </>
             }
-        </>
+        </div>
     );
 };
 

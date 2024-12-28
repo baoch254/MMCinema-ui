@@ -1,6 +1,6 @@
 import React from 'react';
 import MovieThumbnail from "../molecules/movie-thumbnail";
-import { MovieType } from '../../constants/constants-and-types'
+import { MovieType } from '@mmcinema-ui/shared-common'
 
 interface MovieShowcaseContainerProps {
     movies : MovieType[],

@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryNavigateButton from '../atoms/primary-navigate-button';
 import PrimaryTitle from '../atoms/primary-title';
-import { CONTENTS_MAX_WIDTH } from '@mmcinema-ui/web-ui';
+import { CONTENTS_MAX_WIDTH } from '@mmcinema-ui/shared-common';
 
 const PromoteBanner = () => {
   return (
@@ -57,7 +57,7 @@ const PromoteBanner = () => {
         </div>
 
         <div className="flex items-center">
-          <img src="/promote-img.png" alt="promote image" className="w-full" />
+          <img src="/promote-img.png" alt="promote" className="w-full" />
         </div>
       </div>
     </div>

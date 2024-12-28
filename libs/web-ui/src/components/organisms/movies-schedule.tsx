@@ -1,5 +1,5 @@
 import React from 'react';
-import { CONTENTS_MAX_WIDTH } from '@mmcinema-ui/web-ui';
+import { CONTENTS_MAX_WIDTH } from '@mmcinema-ui/shared-common';
 import PrimarySubTitle from '../atoms/primary-sub-title';
 import LocationSelect from '../molecules/location-select';
 

@@ -13,7 +13,7 @@ const SearchTextInput = ({placeholder, listToSearch} : Props) => {
              value="" />
       <button type="submit" aria-label="Search"
               className="absolute right-2 top-2 border-none opacity-50 outline-none">
-        <img src='/search-icon.svg' className='size-5' />
+        <img src='/search-icon.svg' alt='search-icon' className='size-5' />
       </button>
     </div>
   );

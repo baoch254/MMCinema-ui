@@ -2,7 +2,7 @@
 import useSidebarExpandStore from '../../stores/sidebar-expand-store';
 import NavbarItems from '../molecules/navbar-items';
 import MenuTablet from './menu-tablet';
-import { CONTENTS_MAX_WIDTH } from '../../constants/constants-and-types';
+import { CONTENTS_MAX_WIDTH } from '@mmcinema-ui/shared-common';
 
 const Header = () => {
   const { isSidebarExpanded, setSidebarExpand } = useSidebarExpandStore();

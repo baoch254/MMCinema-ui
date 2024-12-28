@@ -5,14 +5,14 @@ interface Props {
 }
 
 const ScrollToTopButton = ({ containerRef }: Props) => {
-  const scrollToTop = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollTo({
-        top: 999,
-        behavior: 'smooth'
-      });
-    }
-  };
+  // const scrollToTop = () => {
+  //   if (containerRef.current) {
+  //     containerRef.current.scrollTo({
+  //       top: 999,
+  //       behavior: 'smooth'
+  //     });
+  //   }
+  // };
 
   return (
     <div

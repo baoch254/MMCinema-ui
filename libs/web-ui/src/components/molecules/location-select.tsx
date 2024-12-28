@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ProvinceSelectorModal from './province-selector-modal';
 import { Button, ConfigProvider } from 'antd';
-import { PRIMARY_COLOR } from '@mmcinema-ui/web-ui';
+import { PRIMARY_COLOR } from '@mmcinema-ui/shared-common';
 import TargetIcon from '../svg/target-icon';
 
 const LocationSelect = () => {

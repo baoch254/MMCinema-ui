@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Menu, MenuProps } from 'antd';
-import { NavItems } from '@mmcinema-ui/web-ui';
+import { NavItems } from '@mmcinema-ui/shared-common';
 
 interface LevelKeysProps {
   key?: string;

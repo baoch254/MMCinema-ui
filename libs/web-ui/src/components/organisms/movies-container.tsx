@@ -1,15 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import ThumbnailsContainer from './thumbnails-container';
-import { CONTENTS_MAX_WIDTH, MovieType } from '../../constants/constants-and-types';
+import { CONTENTS_MAX_WIDTH, MovieType } from '@mmcinema-ui/shared-common';
 import PrimarySubTitle from '../atoms/primary-sub-title';
 import PrimaryNavigateButton from '../atoms/primary-navigate-button';
 
-interface MoviesContainer {
+interface MoviesContainerProps {
   movieList: MovieType[];
   isNowShowing: boolean;
 }
 
-const MoviesContainer = ({ movieList, isNowShowing }: MoviesContainer) => {
+const MoviesContainer = ({ movieList, isNowShowing }: MoviesContainerProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const updateScrollPosition = () => {
