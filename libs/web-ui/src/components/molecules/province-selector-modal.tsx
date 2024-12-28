@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Modal, Button, ConfigProvider } from 'antd';
 import { PRIMARY_COLOR, PROVINCES } from '@mmcinema-ui/shared-common';
 import { DownOutlined } from '@ant-design/icons';
+import useProvinceStore from '../../stores/province-store';
 
 interface Props {
   currentSelected: 'province' | 'near you';
@@ -10,7 +11,7 @@ interface Props {
 
 const ProvinceSelectorModal = ({ currentSelected }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentProvince, setProvince] = useState('Tp. Hồ Chí Minh');
+  const { selectedProvince, setSelectedProvince } = useProvinceStore()
   const [filteredProvinceList, setFilteredProvinceList] = useState<string[]>(PROVINCES);
 
   const showModal = () => {
@@ -27,7 +28,7 @@ const ProvinceSelectorModal = ({ currentSelected }: Props) => {
 
   const handleProvinceSelect = (province: string) => {
     setIsModalOpen(false);
-    setProvince(province);
+    setSelectedProvince(province);
   };
 
   const removeDiacritics = (str: string) => {
@@ -82,7 +83,7 @@ const ProvinceSelectorModal = ({ currentSelected }: Props) => {
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 ></path>
               </svg>
-              {currentProvince}
+              {selectedProvince}
             </div>
             <DownOutlined className="absolute right-2" />
           </div>
@@ -121,8 +122,8 @@ const ProvinceSelectorModal = ({ currentSelected }: Props) => {
                   theme={{
                     components: {
                       Button: {
-                        defaultBorderColor: `${currentProvince === province ? `${PRIMARY_COLOR}` : ''}`,
-                        defaultColor: `${currentProvince === province ? `${PRIMARY_COLOR}` : ''}`,
+                        defaultBorderColor: `${selectedProvince === province ? `${PRIMARY_COLOR}` : ''}`,
+                        defaultColor: `${selectedProvince === province ? `${PRIMARY_COLOR}` : ''}`,
                         boxShadow: '0 0 0 rgba(0, 0, 0, 0.02)'
                       }
                     }
@@ -133,7 +134,7 @@ const ProvinceSelectorModal = ({ currentSelected }: Props) => {
                           size="large"
                           style={{ boxShadow: '0 0 0', justifyContent: 'left' }}
                   ><span
-                    className={`text-[.9375rem] ${currentProvince === province ? 'font-semibold' : ''}`}>{province}</span>
+                    className={`text-[.9375rem] ${selectedProvince === province ? 'font-semibold' : ''}`}>{province}</span>
                   </Button>
                 </ConfigProvider>
 

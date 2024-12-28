@@ -7,7 +7,7 @@ import TargetIcon from '../svg/target-icon';
 const LocationSelect = () => {
   const [currentSelected, setSelected] = useState<'province' | 'near you'>('province');
   return (
-    <div className="md:shadow-custom rounded-[0.5rem] border-gray-200 bg-white md:overflow-hidden md:border">
+    <div className="rounded-t-[0.5rem] border-gray-200 bg-white md:overflow-hidden md:border-t">
       <div className="relative z-10">
         <div className="flex items-center  pt-3 md:px-4">
           <div className="mr-3 hidden md:block">Vị trí</div>
