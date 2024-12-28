@@ -16,13 +16,18 @@
     "baseUrl": ".",
     "paths": {
       "@admin/*": ["apps/admin/*"],
+      "@mmcinema-ui/api": ["libs/api/src/index.ts"],
+      "@mmcinema-ui/api/server": ["libs/api/src/server.ts"],
       "@mmcinema-ui/assets": ["libs/assets/src/index.ts"],
+      "@mmcinema-ui/libs": ["libs/"],
       "@mmcinema-ui/shadcn": ["libs/shadcn/src/index.ts"],
       "@mmcinema-ui/shared-common": ["libs/shared-common/src/index.ts"],
       "@mmcinema-ui/shared-hooks": ["libs/shared-hooks/src/index.ts"],
       "@mmcinema-ui/shared-providers": ["libs/shared-providers/src/index.ts"],
       "@mmcinema-ui/shared-ui/*": ["libs/shared-ui/src/*"],
-      "@mmcinema-ui/shared-utils": ["libs/shared-utils/src/index.ts"]
+      "@mmcinema-ui/shared-utils": ["libs/shared-utils/src/index.ts"],
+      "@mmcinema-ui/web-ui": ["libs/web-ui/src/index.ts"],
+      "@mmcinema-ui/web-ui/server": ["libs/web-ui/src/server.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -57,7 +57,7 @@
     },
     "@nx/react": {
       "library": {
-        "unitTestRunner": "none"
+        "unitTestRunner": "jest"
       }
     }
   }
