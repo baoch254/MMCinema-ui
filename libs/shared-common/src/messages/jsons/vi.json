@@ -1,0 +1,101 @@
+{
+  "CORE": {
+    "language": {
+      "en": "Tiếng Anh",
+      "vi": "Tiếng Việt"
+    },
+    "not_found": {
+      "title": "Không tìm thấy trang",
+      "message": "Trang bạn đang tìm kiếm không tồn tại hoặc đã bị xóa."
+    },
+    "global_error": {
+      "title": "Lỗi hệ thống",
+      "message": "Hệ thống đang có vấn đề, vui lòng quay lại sau."
+    },
+    "reload": "Tải lại",
+    "system": {
+      "title": "Hệ thống",
+      "setting": "Cài đặt",
+      "logout": "Đăng xuất",
+      "error": "Lỗi hệ thống"
+    },
+    "light": "Sáng",
+    "dark": "Tối",
+    "all": "Tất cả",
+    "search": "Tìm kiếm",
+    "no_results_found": "Không tìm thấy kết quả",
+    "complete": "Hoàn thành",
+    "back": "Quay lại",
+    "noti": "Thông báo",
+    "setting": "Cài đặt",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "close": "Đóng",
+    "block": "Chặn",
+    "open": "Mở",
+    "delete": "Xóa",
+    "edit": "Sửa",
+    "add": "Thêm mới",
+    "view": "Xem",
+    "send": "Gửi",
+    "download": "Tải xuống",
+    "upload": "Tải lên",
+    "copy": "Sao chép",
+    "success": "Thành công",
+    "fail": "Thất bại",
+    "error": "Lỗi",
+    "warning": "Cảnh báo",
+    "info": "Thông tin",
+    "confirm": {
+      "title": "Xác nhận",
+      "delete": "Bạn có chắc chắn muốn xóa?",
+      "close": "Bạn có chắc chắn muốn đóng?",
+      "cancel": "Bạn có chắc chắn muốn hủy?",
+      "save": "Bạn có chắc chắn muốn lưu?",
+      "send": "Bạn có chắc chắn muốn gửi?"
+    },
+    "add_success": "Thêm mới thành công",
+    "update_success": "Cập nhật thành công",
+    "edit_success": "Sửa thành công",
+    "delete_success": "Xóa thành công",
+    "add_fail": "Thêm mới thất bại",
+    "update_fail": "Cập nhật thất bại",
+    "edit_fail": "Sửa thất bại",
+    "delete_fail": "Xóa thất bại"
+  },
+  "title_page": {
+    "root": "MMCinema - Tiếng Việt"
+  },
+  "nav_groups": {
+    "general": "Tổng quan",
+    "pages": "Trang",
+    "other": "Khác",
+    "dashboard": "Bảng điều khiển",
+    "tasks": "Công việc",
+    "apps": "Ứng dụng",
+    "chats": "Trò chuyện",
+    "users": "Người dùng",
+    "auth": "Xác thực",
+    "signIn": "Đăng nhập",
+    "signIn2Col": "Đăng nhập (2 cột)",
+    "signUp": "Đăng ký",
+    "forgotPassword": "Quên mật khẩu",
+    "otp": "OTP",
+    "errors": "Lỗi",
+    "unauthorized": "Không được phép",
+    "forbidden": "Bị cấm",
+    "notFound": "Không tìm thấy",
+    "internalServerError": "Lỗi máy chủ nội bộ",
+    "maintenanceError": "Lỗi bảo trì",
+    "overview": "Tổng quan",
+    "customers": "Khách hàng",
+    "products": "Sản phẩm",
+    "settings": "Cài đặt",
+    "profile": "Hồ sơ",
+    "account": "Tài khoản",
+    "appearance": "Giao diện",
+    "notifications": "Thông báo",
+    "display": "Hiển thị",
+    "helpCenter": "Trung tâm trợ giúp"
+  }
+}
