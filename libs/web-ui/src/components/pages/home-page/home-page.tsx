@@ -11,9 +11,9 @@ const HomePage = () => {
 
   return (
     <div
-      className="relative bg-pink-200 h-[2000px] w-full top-[64px] z-0 overflow-y-auto" ref={containerRef}
+      className="relative bg-pink-200 h-[2000px] w-full top-[64px] z-0 scroll-mt-[64px] " ref={containerRef}
     >
-      <div><PromoteBanner/></div>
+      <PromoteBanner/>
       <MovieShowcase />
       <MoviesSchedule/>
       <div className="fixed right-3 bottom-24 z-30 duration-300 sm:bottom-16 sm:right-8 translate-y-0 opacity-100">

@@ -62,7 +62,7 @@ const MoviesContainer = ({ movieList, isNowShowing }: MoviesContainerProps) => {
         isNowShowing
           ? 'bg-[url(/now-showing-background.jpg)] bg-black'
           : 'bg-white'
-      } scroll-mt-[60px] flex-col bg-contain bg-bottom bg-no-repeat py-8 md:py-10 lg:py-14`}
+      } flex-col bg-contain bg-bottom bg-no-repeat py-8 md:py-10 lg:py-14`}
     >
       <div className={`flex flex-col mx-auto ${CONTENTS_MAX_WIDTH} px-5 md:px-8 lg:px-8`}>
         <div className="mb-5 text-center md:mb-8">

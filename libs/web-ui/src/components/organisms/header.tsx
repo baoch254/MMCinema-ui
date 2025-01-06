@@ -64,7 +64,7 @@ const Header = () => {
                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                   ></path>
                 </svg>
-                <div className="lg:hidden">
+                <div className="lg:hidden cursor-pointer">
                   <svg
                     className="block h-7 w-7"
                     xmlns="http://www.w3.org/2000/svg"
