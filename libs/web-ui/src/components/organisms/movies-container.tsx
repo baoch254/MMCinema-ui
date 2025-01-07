@@ -6,10 +6,10 @@ import PrimaryNavigateButton from '../atoms/primary-navigate-button';
 
 interface MoviesContainerProps {
   movieList: MovieType[];
-  isNowShowing: boolean;
+  type: 'NowShowing' | 'ComingSoon';
 }
 
-const MoviesContainer = ({ movieList, isNowShowing }: MoviesContainerProps) => {
+const MoviesContainer = ({ movieList, type }: MoviesContainerProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const updateScrollPosition = () => {
@@ -59,7 +59,7 @@ const MoviesContainer = ({ movieList, isNowShowing }: MoviesContainerProps) => {
   return (
     <div
       className={`${
-        isNowShowing
+        type === 'NowShowing'
           ? 'bg-[url(/now-showing-background.jpg)] bg-black'
           : 'bg-white'
       } flex-col bg-contain bg-bottom bg-no-repeat py-8 md:py-10 lg:py-14`}
@@ -67,15 +67,15 @@ const MoviesContainer = ({ movieList, isNowShowing }: MoviesContainerProps) => {
       <div className={`flex flex-col mx-auto ${CONTENTS_MAX_WIDTH} px-5 md:px-8 lg:px-8`}>
         <div className="mb-5 text-center md:mb-8">
           <PrimarySubTitle
-            text={`${isNowShowing ? 'Phim đang chiếu' : 'Phim sắp chiếu'}`}
-            color={`${isNowShowing ? 'white' : 'pink'}`}
+            text={`${type === 'NowShowing' ? 'Phim đang chiếu' : 'Phim sắp chiếu'}`}
+            color={`${type === 'NowShowing' ? 'white' : 'pink'}`}
           />
         </div>
         <div className="relative">
           <div className="overflow-x-auto md:overflow-hidden" ref={containerRef}>
             <ThumbnailsContainer
               movies={movieList}
-              theme={`${isNowShowing ? 'dark' : 'light'}`}
+              theme={`${type === 'NowShowing' ? 'dark' : 'light'}`}
             />
           </div>
           <div
@@ -98,7 +98,7 @@ const MoviesContainer = ({ movieList, isNowShowing }: MoviesContainerProps) => {
           </div>
         </div>
       </div>
-      {!isNowShowing &&
+      {type !== 'NowShowing' &&
         <div className="mt-5 text-center md:mt-8"><PrimaryNavigateButton text={'Tìm phim chiếu rạp'} /></div>}
     </div>
   );

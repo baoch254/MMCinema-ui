@@ -299,7 +299,8 @@ export type CinemaBranch = {
   id: string,
   name: string,
   address: string,
-  brand: string
+  brand: string,
+  logo_url: string
 }
 
 export const CINEMA_BRANDS = [
@@ -350,37 +351,71 @@ export const CINEMAS = [
         id: 'cgv-su-van-hanh',
         name: 'CGV Sư Vạn Hạnh',
         address: 'Tầng 6, Vạn Hạnh Mall, 11 Sư Vạn Hạnh, Phường 12, Quận 10',
-        brand: 'CGV'
+        brand: 'CGV',
+        logo_url: '/cgv-logo.png'
       },
       {
         id: 'cgv-crescent-mall',
         name: 'CGV Crescent Mall',
         address: 'Tầng 5, Crescent Mall, Phú Mỹ Hưng, Quận 7',
-        brand: 'CGV'
+        brand: 'CGV',
+        logo_url: '/cgv-logo.png'
+      },
+      {
+        id: 'cgv-hung-vuong-plaza',
+        name: 'CGV Hùng Vương Plaza',
+        address: 'Tầng 7 | Hùng Vương Plaza 126 Hùng Vương Quận 5 Tp. Hồ Chí Minh',
+        brand: 'CGV',
+        logo_url: '/cgv-logo.png'
+      },
+      {
+        id: 'cgv-vincom-go-vap',
+        name: 'CGV Vincom Gò Vấp',
+        address: 'Tầng 5 TTTM Vincom Plaza Gò Vấp, 12 Phan Văn Trị, Phường 7, Quận Gò Vấp',
+        brand: 'CGV',
+        logo_url: '/cgv-logo.png'
       },
       {
         id: 'lotte-cong-hoa',
         name: 'Lotte Cộng Hòa',
         address: 'Tầng 4 Pico Plaza, 20 Cộng Hòa, Phường 12, Quận Tân Bình',
-        brand: 'Lotte Cinema'
+        brand: 'Lotte Cinema',
+        logo_url: '/lotte-logo.png'
       },
       {
         id: 'lotte-nam-sai-gon',
         name: 'Lotte Nam Sài Gòn',
         address: 'Tầng 3, TTTM Lotte, số 469 đường Nguyễn Hữu Thọ, P.Tân Hưng, Quận 7',
-        brand: 'Lotte Cinema'
+        brand: 'Lotte Cinema',
+        logo_url: '/lotte-logo.png'
+      },
+      {
+        id: 'lotte-nowzone',
+        name: 'Lotte Nowzone',
+        address: 'Tầng 5, TTTM Nowzone, 235 Nguyễn Văn Cừ, P.Nguyễn Cư Trinh, Quận 1',
+        brand: 'Lotte Cinema',
+        logo_url: '/lotte-logo.png'
+      },
+      {
+        id: 'lotte-phu-tho',
+        name: 'Lotte Phú Thọ',
+        address: 'Tầng 4 Lotte Mart Phú Thọ, Số 968 đường Ba Tháng Hai, P.15, Quận 11',
+        brand: 'Lotte Cinema',
+        logo_url: '/lotte-logo.png'
       },
       {
         id: 'galaxy-trung-chanh',
         name: 'Galaxy Trung Chánh',
         address: 'Hông Trung Tâm Văn Hóa Quận 12 Nguyễn Ảnh Thủ, P, 09 QL22, Trung Mỹ Tây, TP. HCM',
-        brand: 'Galaxy Cinemas'
+        brand: 'Galaxy Cinemas',
+        logo_url: '/galaxy-cinema-logo.png'
       },
       {
         id: 'galaxy-kinh-duong-vuong',
         name: 'Galaxy Kinh Dương Vương',
         address: '718bis Kinh Dương Vương, Phường 13, Quận 6, Thành phố Hồ Chí Minh',
-        brand: 'Galaxy Cinemas'
+        brand: 'Galaxy Cinemas',
+        logo_url: '/galaxy-cinema-logo.png'
       }
     ]
   },
@@ -391,37 +426,43 @@ export const CINEMAS = [
         id: 'cgv-aeon-ha-dong',
         name: 'CGV Aeon Hà Đông',
         address: 'Tầng 3, 4 | TTTM AEON MALL HÀ ĐÔNG, P. Dương Nội, Q. Hà Đông, Hà Nội',
-        brand: 'CGV'
+        brand: 'CGV',
+        logo_url: '/cgv-logo.png'
       },
       {
         id: 'cgv-aeon-long-bien',
         name: 'CGV Aeon Long Biên',
         address: 'Tầng 4 - TTTM AEON Long Biên, Số 27 Cổ Linh, Quận Long Biên, Hà Nội',
-        brand: 'CGV'
+        brand: 'CGV',
+        logo_url: '/cgv-logo.png'
       },
       {
         id: 'lotte-west-lake',
         name: 'Lotte West Lake',
         address: 'Tầng 4 Lotte Mall West Lake Hanoi, 683 Lạc Long Quân, Tây Hồ, Hà Nội',
-        brand: 'Lotte Cinema'
+        brand: 'Lotte Cinema',
+        logo_url: '/lotte-logo.png'
       },
       {
         id: 'lotte-thang-long',
         name: 'Lotte Thăng Long',
         address: 'Tầng 3, TTTM Big C Thăng Long, Số 222 Trần Duy Hưng, P.Trung Hoà, Q.Cầu Giấy',
-        brand: 'Lotte Cinema'
+        brand: 'Lotte Cinema',
+        logo_url: '/lotte-logo.png'
       },
       {
         id: 'galaxy-mipec-long-bien',
         name: 'Galaxy Mipec Long Biên',
         address: 'Lầu 6 | Mipec Riverside Long Biên, số 2 Long Biên, Ngọc Lâm, Long Biên, Tp.Hà Nội',
-        brand: 'Galaxy Cinemas'
+        brand: 'Galaxy Cinemas',
+        logo_url: '/galaxy-cinema-logo.png'
       },
       {
         id: 'galaxy-trang-thi',
         name: 'Galaxy Tràng Thi',
         address: 'Lầu 4 | TTTM Nguyễn Kim, 10B Tràng Thi, Hàng Trống, Hoàn Kiếm, TP. Hà Nội',
-        brand: 'Galaxy Cinemas'
+        brand: 'Galaxy Cinemas',
+        logo_url: '/galaxy-cinema-logo.png'
       }
     ]
   }
