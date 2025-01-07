@@ -2,7 +2,7 @@ import React from 'react';
 import { CONTENTS_MAX_WIDTH } from '@mmcinema-ui/shared-common';
 import PrimarySubTitle from '../atoms/primary-sub-title';
 import LocationSelect from '../molecules/location-select';
-import CinemaBrandSelect from '../molecules/cinema-brand-select';
+import CinemaBrandSelector from '../molecules/cinema-brand-selector';
 import CinemaBranchSelector from '../molecules/cinema-branch-selector';
 import ShowtimeSelector from '../molecules/showtime-selector';
 
@@ -18,7 +18,7 @@ const MoviesSchedule = () => {
         </div>
         <div className='rounded-[0.5rem] shadow-custom border border-gray-200'>
           <LocationSelect />
-          <CinemaBrandSelect />
+          <CinemaBrandSelector />
           <div className="rounded-b-[0.5rem] bg-white grid grid-cols-1 md:grid-cols-3">
             <CinemaBranchSelector />
             <ShowtimeSelector />

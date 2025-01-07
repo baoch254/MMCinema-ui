@@ -1,8 +1,7 @@
-import React from 'react';
 import { CINEMA_BRANDS } from '@mmcinema-ui/shared-common';
 import useCinemaBrandStore from '../../stores/cinema-brand-store';
 
-const CinemaBrandSelect = () => {
+const CinemaBrandSelector = () => {
 
   const { selectedBrand, setSelectedBrand } = useCinemaBrandStore();
 
@@ -22,18 +21,18 @@ const CinemaBrandSelect = () => {
             className={`${selectedBrand === 'All' ? 'text-pink-600 font-semibold' : ''} truncate w-full text-center ml-1 mt-2 overflow-hidden text-ellipsis whitespace-nowrap text-xs text-gray-500`}>All</span>
         </div>
         {
-          CINEMA_BRANDS.map((cinema) => {
+          CINEMA_BRANDS.map((brand) => {
             return <div className={`w-16 mr-[2px] cursor-pointer flex flex-col items-center`}
-                        key={cinema.name}
-                        onClick={() => setSelectedBrand(cinema.name)}
+                        key={brand.name}
+                        onClick={() => setSelectedBrand(brand.name)}
             >
               <div
-                className={`mx-auto flex h-12 w-12 items-center justify-center overflow-hidden border bg-white border-gray-200 ${cinema.name === selectedBrand ? 'border-pink-600' : ''}`}
+                className={`mx-auto flex h-12 w-12 items-center justify-center overflow-hidden border bg-white border-gray-200 ${brand.name === selectedBrand ? 'border-pink-600' : ''}`}
                 style={{ borderRadius: 8 }}>
-                <img className="" src={cinema.logo_url} alt={cinema.name} />
+                <img className="" src={brand.logo_url} alt={brand.name} />
               </div>
               <span
-                className={`${cinema.name === selectedBrand ? 'text-pink-600 font-semibold' : ''} truncate w-full text-center ml-1 mt-2 overflow-hidden text-ellipsis whitespace-nowrap text-xs text-gray-500`}>{cinema.name}</span>
+                className={`${brand.name === selectedBrand ? 'text-pink-600 font-semibold' : ''} truncate w-full text-center ml-1 mt-2 overflow-hidden text-ellipsis whitespace-nowrap text-xs text-gray-500`}>{brand.name}</span>
             </div>;
           })
         }
@@ -42,4 +41,4 @@ const CinemaBrandSelect = () => {
   );
 };
 
-export default CinemaBrandSelect;
+export default CinemaBrandSelector;

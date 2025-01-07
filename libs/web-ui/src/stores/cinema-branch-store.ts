@@ -1,13 +1,14 @@
 import {create} from 'zustand';
+import { CinemaBranch } from '@mmcinema-ui/shared-common';
 
 interface CinemaBranchStore {
-  selectedBranch : string,
-  setSelectedBranch : (selectedBranch : string) => void
+  selectedBranch : CinemaBranch | undefined,
+  setSelectedBranch : (selectedBranch : CinemaBranch) => void
 }
 
 const useCinemaBranchStore = create<CinemaBranchStore>((set) => ({
-  selectedBranch: '',
-  setSelectedBranch: (selectedBranch : string) => {
+  selectedBranch: undefined,
+  setSelectedBranch: (selectedBranch : CinemaBranch) => {
     set({ selectedBranch: selectedBranch });
   }
 }))
