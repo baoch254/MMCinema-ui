@@ -3,3 +3,4 @@ export {getNowShowingMoviews, getUpcomingMovies} from './utils-functions/date-ca
 export {default as getGenre} from './utils-functions/get-genre-list'
 export {default as getMovieInfo} from './utils-functions/get-movie-info'
 export {default as sortByScore} from './utils-functions/sort-by-score'
+export {default as getMovieInfoFromId} from './utils-functions/get-movie-info-from-id'

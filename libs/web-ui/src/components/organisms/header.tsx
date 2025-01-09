@@ -1,5 +1,5 @@
 'use client';
-import useSidebarExpandStore from '../../stores/sidebar-expand-store';
+import { useSidebarExpandStore } from '@mmcinema-ui/shared-stores';
 import NavbarItems from '../molecules/navbar-items';
 import MenuTablet from './menu-tablet';
 import { CONTENTS_MAX_WIDTH } from '@mmcinema-ui/shared-common';

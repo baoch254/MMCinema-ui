@@ -4,7 +4,7 @@ import PrimarySubTitle from '../atoms/primary-sub-title';
 import LocationSelect from '../molecules/location-select';
 import CinemaBrandSelector from '../molecules/cinema-brand-selector';
 import CinemaBranchSelector from '../molecules/cinema-branch-selector';
-import ShowtimeSelector from '../molecules/showtime-selector';
+import SchedulesContainer from '../molecules/schedules-container';
 
 
 const MoviesSchedule = () => {
@@ -21,7 +21,7 @@ const MoviesSchedule = () => {
           <CinemaBrandSelector />
           <div className="rounded-b-[0.5rem] bg-white grid grid-cols-1 md:grid-cols-3">
             <CinemaBranchSelector />
-            <ShowtimeSelector />
+            <SchedulesContainer />
           </div>
         </div>
       </div>

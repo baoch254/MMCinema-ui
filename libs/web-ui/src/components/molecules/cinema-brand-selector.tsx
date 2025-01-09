@@ -1,5 +1,5 @@
 import { CINEMA_BRANDS } from '@mmcinema-ui/shared-common';
-import useCinemaBrandStore from '../../stores/cinema-brand-store';
+import { useCinemaBrandStore } from '@mmcinema-ui/shared-stores';
 
 const CinemaBrandSelector = () => {
 

@@ -352,7 +352,47 @@ export const CINEMAS = [
         name: 'CGV Sư Vạn Hạnh',
         address: 'Tầng 6, Vạn Hạnh Mall, 11 Sư Vạn Hạnh, Phường 12, Quận 10',
         brand: 'CGV',
-        logo_url: '/cgv-logo.png'
+        logo_url: '/cgv-logo.png',
+        nowShowing: [
+          {
+            movieId: 129,
+            showings: [
+              {
+                date: '2025-12-10',
+                info: [
+                  {
+                    format: '2D Phụ đề',
+                    time: [
+                      '10:50:00', '17:20:00', '19:50:00'
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            movieId: 939243,
+            showings: [
+              {
+                date: '2025-12-10',
+                info: [
+                  {
+                    format: '2D Phụ đề',
+                    time: [
+                      '19:20:00'
+                    ]
+                  },
+                  {
+                    format: '2D Lồng tiếng',
+                    time: [
+                      '11:30:00', '19:20:00'
+                    ]
+                  }
+                ]
+              },
+            ]
+          }
+        ]
       },
       {
         id: 'cgv-crescent-mall',
@@ -467,6 +507,18 @@ export const CINEMAS = [
     ]
   }
 ];
+
+export const dates = [
+  { 'date': '2025-12-10', 'day': 'Hôm nay' },
+  { 'date': '2025-12-11', 'day': 'Thứ 7' },
+  { 'date': '2025-12-12', 'day': 'Chủ Nhật' },
+  { 'date': '2025-12-13', 'day': 'Thứ 2' },
+  { 'date': '2025-12-14', 'day': 'Thứ 3' },
+  { 'date': '2025-12-15', 'day': 'Thứ 4' },
+  { 'date': '2025-12-16', 'day': 'Thứ 5' }
+];
+
+export const currentMovies = [];
 
 
 

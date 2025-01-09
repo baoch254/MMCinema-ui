@@ -1,13 +1,13 @@
 import {create} from 'zustand';
 
 interface SelectedDateStore {
-  selectedDate : number | undefined,
-  setSelectedDate : (selectedDate : number) => void
+  selectedDate : Date | undefined,
+  setSelectedDate : (selectedDate : Date) => void
 }
 
 const useSelectedDateStore = create<SelectedDateStore>((set) => ({
-  selectedDate: 10,
-  setSelectedDate: (selectedDate : number) => {
+  selectedDate: new Date('2025-12-10'),
+  setSelectedDate: (selectedDate : Date) => {
     set({ selectedDate: selectedDate });
   }
 }))

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Modal, Button, ConfigProvider } from 'antd';
 import { PRIMARY_COLOR, PROVINCES } from '@mmcinema-ui/shared-common';
 import { DownOutlined } from '@ant-design/icons';
-import useProvinceStore from '../../stores/province-store';
+import { useProvinceStore } from '@mmcinema-ui/shared-stores';
 
 interface Props {
   currentSelected: 'province' | 'near you';

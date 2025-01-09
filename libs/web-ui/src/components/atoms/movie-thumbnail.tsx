@@ -7,7 +7,7 @@ interface Props {
 const MovieThumbnailImage = ({thumbnail_url} : Props) => {
   return (
     <img
-      className="object-fill object-center aspect-[2/3] transition-transform duration-300 hover:scale-[1.1]"
+      className="object-fill object-center aspect-[2/3] transition-transform duration-300 hover:scale-[1.1] cursor-pointer"
       loading="lazy"
       src={thumbnail_url}
       alt="movie thumbnail"
