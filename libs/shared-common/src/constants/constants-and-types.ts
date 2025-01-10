@@ -356,6 +356,7 @@ export const CINEMAS = [
         nowShowing: [
           {
             movieId: 129,
+            runtime: 120,
             showings: [
               {
                 date: '2025-12-10',
@@ -363,15 +364,16 @@ export const CINEMAS = [
                   {
                     format: '2D Phụ đề',
                     time: [
-                      '10:50:00', '17:20:00', '19:50:00'
-                    ]
-                  }
+                      '10:50', '17:20', '19:50'
+                    ],
+                  },
                 ]
               }
             ]
           },
           {
             movieId: 939243,
+            runtime: 120,
             showings: [
               {
                 date: '2025-12-10',
@@ -379,13 +381,13 @@ export const CINEMAS = [
                   {
                     format: '2D Phụ đề',
                     time: [
-                      '19:20:00'
-                    ]
+                      '19:20'
+                    ],
                   },
                   {
                     format: '2D Lồng tiếng',
                     time: [
-                      '11:30:00', '19:20:00'
+                      '11:30', '19:20'
                     ]
                   }
                 ]
