@@ -5,5 +5,21 @@
   "projectType": "application",
   "tags": [],
   "// targets": "to see all targets run: nx show project mobile --web",
-  "targets": {}
+  "targets": {
+    "tauri:dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npx tauri dev"],
+        "parallel": true,
+        "cwd": "apps/mobile"
+      }
+    },
+    "tauri:build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npx tauri build"],
+        "cwd": "apps/mobile"
+      }
+    }
+  }
 }
