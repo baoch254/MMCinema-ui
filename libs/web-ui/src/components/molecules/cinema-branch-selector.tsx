@@ -4,7 +4,7 @@ import { useCinemaBrandStore } from '@mmcinema-ui/shared-stores';
 import { useProvinceStore } from '@mmcinema-ui/shared-stores';
 import { useCinemaBranchStore } from '@mmcinema-ui/shared-stores';
 import { Button } from 'antd';
-import CinemaNotFound from './cinema-not-found';
+import NotFound from './not-found';
 import { LoadingOutlined } from '@ant-design/icons';
 import { Spin } from 'antd';
 
@@ -16,7 +16,6 @@ const CinemaBranchSelector = () => {
   const { selectedBranch, setSelectedBranch } = useCinemaBranchStore();
   const [cinemaList, setCinemaList] = useState<CinemaBranch[] | undefined>();
   const [isLoading, setLoading] = useState(true);
-
   const [numberOfItemsShown, setNumberOfItemsToShow] = useState(7);
 
   const showMore = () => {
@@ -110,7 +109,7 @@ const CinemaBranchSelector = () => {
         </div>
         {
           (!isLoading && cinemaList?.length === 0) && (
-            <CinemaNotFound />
+            <NotFound type='cinema'/>
           )
         }
         {

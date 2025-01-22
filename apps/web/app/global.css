@@ -6,3 +6,17 @@
   display: none; /* For Chrome, Safari, and Edge */
 }
 
+.ant-modal-root .modal-in-booking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ant-modal-root .modal-in-booking .ant-modal{
+  top: 0;
+}
+
+.ant-modal-root .modal-in-booking .ant-modal div .ant-modal-content {
+  padding: 0
+}
+

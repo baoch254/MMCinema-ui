@@ -364,9 +364,11 @@ export const CINEMAS = [
                   {
                     format: '2D Phụ đề',
                     time: [
-                      '10:50', '17:20', '19:50'
-                    ],
-                  },
+                      {showtime: '10:50', cinemaRoomId: 1},
+                      {showtime: '17:20', cinemaRoomId: 2},
+                      {showtime: '19:50', cinemaRoomId: 1},
+                    ]
+                  }
                 ]
               }
             ]
@@ -381,17 +383,18 @@ export const CINEMAS = [
                   {
                     format: '2D Phụ đề',
                     time: [
-                      '19:20'
-                    ],
+                      {showtime: '19:20', cinemaRoomId : 1}
+                    ]
                   },
                   {
                     format: '2D Lồng tiếng',
                     time: [
-                      '11:30', '19:20'
+                      {showtime: '11:30', cinemaRoomId : 2},
+                      {showtime: '19:20', cinemaRoomId : 2},
                     ]
                   }
                 ]
-              },
+              }
             ]
           }
         ]
@@ -520,7 +523,91 @@ export const dates = [
   { 'date': '2025-12-16', 'day': 'Thứ 5' }
 ];
 
-export const currentMovies = [];
+export const cinemaRooms = [
+  {
+    branchName: 'CGV Sư Vạn Hạnh',
+    rooms: [
+      {
+        roomId: 1,
+        roomName: 'Phòng chiếu Cinema 1',
+        seatsConfig: {
+          rows: 12,
+          columns: 22,
+          normalSeatRows: [1, 2, 3],
+          vipSeatRows: [4, 5, 6, 7, 8, 9, 10, 11],
+          sweetboxRow: 12,
+          gaps: [
+            { row: 1, columns: [3, 4, 5, 19, 20] },
+            { row: 2, columns: [3, 4, 19, 20, 22] },
+            { row: 3, columns: [3, 4, 19, 20, 22] },
+            { row: 4, columns: [3, 4, 19, 20] },
+            { row: 5, columns: [3, 4, 19, 20] },
+            { row: 6, columns: [3, 4, 19, 20] },
+            { row: 7, columns: [3, 4, 19, 20] },
+            { row: 8, columns: [3, 4, 19, 20] },
+            { row: 9, columns: [3, 4, 19, 20] },
+            { row: 10, columns: [3, 4, 19, 20] },
+            { row: 11, columns: [3, 4, 19, 20] },
+            { row: 12, columns: [22, 21, 2, 1] }
+          ],
+        }
+      },
+      {
+        roomId: 2,
+        roomName: 'Phòng chiếu Cinema 2',
+        seatsConfig: {
+          rows: 12,
+          columns: 15,
+          normalSeatRows: [1, 2, 3],
+          vipSeatRows: [4, 5, 6, 7, 8, 9, 10, 11],
+          sweetboxRow: 12,
+          gaps: [
+            { row: 1, columns: [3, 4, 12, 13] },
+            { row: 2, columns: [3, 4, 12, 13] },
+            { row: 3, columns: [3, 4, 12, 13] },
+            { row: 4, columns: [3, 4, 12, 13] },
+            { row: 5, columns: [3, 4, 12, 13] },
+            { row: 6, columns: [3, 4, 12, 13] },
+            { row: 7, columns: [3, 4, 12, 13] },
+            { row: 8, columns: [3, 4, 12, 13] },
+            { row: 9, columns: [3, 4, 12, 13] },
+            { row: 10, columns: [3, 4, 12, 13] },
+            { row: 11, columns: [3, 4, 12, 13] },
+            { row: 12, columns: [3, 4, 12, 13] }
+          ],
+        }
+      }
+    ]
+  }
+];
+
+export type CinemaRoomType = {
+    roomId: number;
+    roomName: string;
+    seatsConfig: {
+      rows: number;
+      columns: number;
+      normalSeatRows: number[];
+      vipSeatRows: number[];
+      sweetboxRow: number;
+      gaps: {
+        row: number;
+        columns: number[];
+      }[];
+    }
+};
+
+export type MovieInfo = {
+  title: string,
+  thumbnail_url: string,
+  genres: string[],
+  runtime: number,
+  showings: {
+    format: string,
+    time: { showtime: string, cinemaRoomId: number }[],
+  }[]
+}
+
 
 
 

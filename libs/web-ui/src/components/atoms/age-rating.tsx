@@ -26,7 +26,7 @@ const AgeRating = ({rating} : Props) => {
       console.error('Invalid rating')
   }
   return (
-    <div className={`inline-flex rounded-sm  min-w-[20px] h-5 items-center justify-center bg-opacity-80 px-1 text-xs font-semibold text-white text-opacity-95 ${backgroundColor}`}>
+    <div className={`inline-flex rounded-[2px] min-w-[20px] h-5 items-center justify-center bg-opacity-80 px-1 text-xs font-semibold text-white text-opacity-95 ${backgroundColor}`}>
       {rating}
     </div>
   );

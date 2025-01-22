@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import MovieThumbnailInSchedule from './movie-thumbnail-in-schedule';
-import { CINEMAS } from '@mmcinema-ui/shared-common';
+import { CINEMAS, MovieInfo } from '@mmcinema-ui/shared-common';
 import {
   useCinemaBranchStore,
   useSelectedDateStore,
@@ -11,17 +11,7 @@ import {
 import { getGenre, getMovieInfoFromId} from '@mmcinema-ui/shared-utils'
 import AgeRating from '../atoms/age-rating';
 import ShowtimeButtons from '../atoms/showtime-buttons';
-
-type MovieInfo = {
-  title: string,
-  thumbnail_url: string,
-  genres: string[],
-  runtime: number,
-  showings: {
-    format: string,
-    time: string[]
-  }[]
-}
+import NotFound from './not-found';
 
 const MoviesWithShowtimeContainer = () => {
   const { moviesList } = useMoviesStore();
@@ -46,7 +36,7 @@ const MoviesWithShowtimeContainer = () => {
           const genres = getGenre(movieFromId.genre_ids);
           const formatTimeInfo : {
             format: string,
-            time: string[]
+            time: { showtime: string, cinemaRoomId: number }[]
           }[] = []
           const nowShowingMoviesInfo = movie.showings.find((showing) =>
             new Date(showing.date).getTime() === selectedDate?.getTime()
@@ -69,7 +59,7 @@ const MoviesWithShowtimeContainer = () => {
 
   return (
     <div className="w-full">
-      {(showingMoviesInfo && showingMoviesInfo.length > 0) && showingMoviesInfo.map((movie) => {
+      {(showingMoviesInfo && showingMoviesInfo.length > 0) ? showingMoviesInfo.map((movie) => {
         return <div key={movie.title} className="grid border-b border-gray-200">
           <div className="w-full p-4 text-left">
             <div className="grid gap-x-4 gap-y-0 md:gap-x-4 lg:gap-x-6"
@@ -87,13 +77,14 @@ const MoviesWithShowtimeContainer = () => {
               </div>
               <div className="col-span-2 col-start-1 md:col-start-2">
                   {movie.showings.map((showing) => {
-                    return <ShowtimeButtons showing={showing} runtime={movie.runtime}/>
+                    return <ShowtimeButtons showing={showing} runtime={movie.runtime} movieTitle={movie.title}/>
                     })}
               </div>
             </div>
           </div>
         </div>;
-      })
+      }) :
+        <NotFound type='schedule'/>
       }
     </div>
   );
